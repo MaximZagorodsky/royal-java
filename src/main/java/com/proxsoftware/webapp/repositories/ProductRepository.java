@@ -11,7 +11,7 @@ import java.util.List;
 @Repository
 public interface ProductRepository extends MongoRepository<Product, BigInteger> {
 
-    List<Product> findByCategory(String searchString, PageRequest pageRequest);
+    List<Product> findByCategory(String searchString,  PageRequest pageRequest);
 
     List<Product> findByNameLike(String searchString, PageRequest pageRequest);
 
