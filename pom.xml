@@ -180,12 +180,12 @@
 
     <repositories>
         <repository>
-            <contentId>spring-milestone</contentId>
+            <id>spring-milestone</id>
             <url>https://repo.spring.io/libs-release</url>
         </repository>
 
         <repository>
-            <contentId>sonatype-snapshots</contentId>
+            <id>sonatype-snapshots</id>
             <url>https://oss.sonatype.org/content/repositories/snapshots</url>
             <snapshots>
                 <enabled>true</enabled>
@@ -196,12 +196,12 @@
 
     <pluginRepositories>
         <pluginRepository>
-            <contentId>spring-milestone</contentId>
+            <id>spring-milestone</id>
             <url>https://repo.spring.io/libs-release</url>
         </pluginRepository>
 
         <pluginRepository>
-            <contentId>jetty</contentId>
+            <id>jetty</id>
             <url>https://mvnrepository.com/artifact/org.eclipse.jetty</url>
         </pluginRepository>
     </pluginRepositories>

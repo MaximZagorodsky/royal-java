@@ -11,6 +11,7 @@ import com.proxsoftware.webapp.repositories.ProductRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -54,16 +55,18 @@ public class RegController {
             produces = MediaType.APPLICATION_JSON_VALUE
     )
     public ResponseEntity<?> getCategories() {
-        List<Category> categoriesToFrontEnd = categoryRepository.findAll();
-        log.info("categories get:" + categoriesToFrontEnd);
-        return new ResponseEntity<>(categoriesToFrontEnd, HttpStatus.OK);
+        List<Category> allCategories = categoryRepository.findAll();
+        log.info("categories get:" + allCategories);
+        return new ResponseEntity<>(allCategories, HttpStatus.OK);
     }
 
     @RequestMapping(value = "/products", method = RequestMethod.GET,
             produces = MediaType.APPLICATION_JSON_VALUE
     )
     public ResponseEntity<?> getAllProducts() {
-        return new ResponseEntity<>(productRepository.findAll(), HttpStatus.OK);
+        List<Product> productList = productRepository.findAll();
+        log.info("getAllProducts:" + productList);
+        return new ResponseEntity<>(productList, HttpStatus.OK);
     }
 
     private List<Product> createProducts() {
@@ -85,16 +88,35 @@ public class RegController {
         return productList;
     }
 
-    @RequestMapping(value = "/product{productId}", method = RequestMethod.GET,
+    @RequestMapping(value = "/productsByCategory{category}", method = RequestMethod.GET,
             produces = MediaType.APPLICATION_JSON_VALUE
 //            consumes = MediaType.APPLICATION_JSON_UTF8_VALUE
     )
-    public ResponseEntity<?> getProductByCategory(@RequestParam String productId) {
+    public ResponseEntity<?> getProductsByCategory(@RequestParam String category) {
+        List<Product> findBycategory = productRepository.findByCategory(category, new PageRequest(0, 10));
+        log.info("getProductsByCategory:category =" + category + ", content:" + findBycategory);
+        return new ResponseEntity<>(findBycategory, HttpStatus.OK);
+    }
 
-        log.info("getProductById:id="+productId+", content:"+productRepository.findAll());
+    @RequestMapping(value = "/productBySearch{searchQuery}", method = RequestMethod.GET,
+            produces = MediaType.APPLICATION_JSON_VALUE
+//            consumes = MediaType.APPLICATION_JSON_VALUE
+    )
+    public ResponseEntity<?> getProductBySearch(@RequestParam String searchQuery) {
+        List<Product> searchByNameLike = productRepository.findByNameLike(
+                searchQuery.toUpperCase(), new PageRequest(0, 10));
+        log.info("getProductById:id=" + searchQuery + ", content:" + searchByNameLike);
+        return new ResponseEntity<>(searchByNameLike, HttpStatus.OK);
+    }
 
-        return new ResponseEntity<>( productRepository.findOne(BigInteger.
-                valueOf(Long.parseLong(productId))), HttpStatus.OK);
+    @RequestMapping(value = "/product{productId}", method = RequestMethod.GET,
+            produces = MediaType.APPLICATION_JSON_VALUE
+//            consumes = MediaType.APPLICATION_JSON_VALUE
+    )
+    public ResponseEntity<?> getProductById(@RequestParam String productId) {
+        Product product = productRepository.findOne(BigInteger.valueOf(Long.parseLong(productId)));
+        log.info("getProductById:id=" + productId + ", content:" + product);
+        return new ResponseEntity<>(product, HttpStatus.OK);
     }
 
     private List<Category> createCategories() {
