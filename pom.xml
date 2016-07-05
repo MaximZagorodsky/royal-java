@@ -52,16 +52,28 @@
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-jpa</artifactId>
-            <version>${spring-boot.version}</version>
+            <artifactId>spring-boot-starter-data-mongodb</artifactId>
         </dependency>
 
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.boot</groupId>-->
+            <!--<artifactId>spring-boot-starter-data-jpa</artifactId>-->
+            <!--<version>${spring-boot.version}</version>-->
+        <!--</dependency>-->
 
-        <dependency>
+
+        <!--<dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
             <version>${spring-boot.version}</version>
-        </dependency>
+        </dependency>-->
+
+        <!--MongoDB-->
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.data</groupId>-->
+            <!--<artifactId>spring-data-mongodb</artifactId>-->
+            <!--<version>1.9.2.RELEASE</version>-->
+        <!--</dependency>-->
 
         <dependency>
             <groupId>com.thoughtworks.xstream</groupId>
@@ -168,12 +180,12 @@
 
     <repositories>
         <repository>
-            <id>spring-milestone</id>
+            <contentId>spring-milestone</contentId>
             <url>https://repo.spring.io/libs-release</url>
         </repository>
 
         <repository>
-            <id>sonatype-snapshots</id>
+            <contentId>sonatype-snapshots</contentId>
             <url>https://oss.sonatype.org/content/repositories/snapshots</url>
             <snapshots>
                 <enabled>true</enabled>
@@ -184,12 +196,12 @@
 
     <pluginRepositories>
         <pluginRepository>
-            <id>spring-milestone</id>
+            <contentId>spring-milestone</contentId>
             <url>https://repo.spring.io/libs-release</url>
         </pluginRepository>
 
         <pluginRepository>
-            <id>jetty</id>
+            <contentId>jetty</contentId>
             <url>https://mvnrepository.com/artifact/org.eclipse.jetty</url>
         </pluginRepository>
     </pluginRepositories>

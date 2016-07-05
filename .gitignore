@@ -1,5 +1,3 @@
-/test.json
-/Dinamic table
-/dinamic form
-/.idea
-/target
+/node_modules
+/app
+/src

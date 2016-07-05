@@ -1,25 +1,13 @@
 package com.proxsoftware.webapp;
 
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.PropertySource;
-import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @SpringBootApplication
-@PropertySource("classpath:application.properties")
-@ComponentScan(basePackages = {"com.proxsoftware.webapp.*"})
-@EnableTransactionManagement
-//@EntityScan(basePackageClasses = new Clas)
-public class Application /*implements EmbeddedServletContainerCustomizer*/ {
-
-
-    @Value(value = "${file_uri}")
-    private static String FILE_URI;
+//@PropertySource("classpath:application.properties")
+public class Application {
 
     public static void main(String[] args) {
-        System.out.println("from run " + FILE_URI);
         SpringApplication.run(Application.class, args);
     }
 
