@@ -16,5 +16,4 @@ public interface ProductRepository extends MongoRepository<Product, BigInteger> 
     List<Product> findByNameLike(String searchString, PageRequest pageRequest);
 
 
-//   Product findById(BigInteger id);
 }
