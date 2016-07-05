@@ -1,6 +1,0 @@
-/target
-.target
-.log
-/log
-.idea
-/idea
