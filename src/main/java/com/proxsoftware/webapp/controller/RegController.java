@@ -4,9 +4,7 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.proxsoftware.webapp.Entity.Category;
 import com.proxsoftware.webapp.Entity.Product;
-import com.proxsoftware.webapp.Entity.User;
 import com.proxsoftware.webapp.repositories.CategoryRepository;
-import com.proxsoftware.webapp.repositories.ContactRepository;
 import com.proxsoftware.webapp.repositories.ProductRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,10 +13,11 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.util.StringUtils;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
-import javax.naming.AuthenticationException;
 import java.io.File;
 import java.io.IOException;
 import java.math.BigInteger;
@@ -30,26 +29,13 @@ import java.util.List;
 public class RegController {
     private Logger log = LoggerFactory.getLogger(RegController.class);
 
-    @Autowired
-    private ContactRepository contactRepository;
+
     @Autowired
     private CategoryRepository categoryRepository;
     @Autowired
     private ProductRepository productRepository;
 
-    @RequestMapping(value = "/login", method = RequestMethod.POST,
-            produces = MediaType.APPLICATION_JSON_VALUE,
-            consumes = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<?> login(@RequestBody User user) throws AuthenticationException {
-        if (StringUtils.isEmpty(user.getUsername()) || StringUtils.isEmpty(user.getPassword())) {
-            throw new AuthenticationException("Username and password must be provided");
-        }
-        contactRepository.save(user);
-        String name = user.getUsername();
-        List<User> all = contactRepository.findAll();
-        log.info("username" + user.getUsername() + ", password: " + user.getPassword());
-        return new ResponseEntity<>(user, HttpStatus.OK);
-    }
+
 
     @RequestMapping(value = "/categories", method = RequestMethod.GET,
             produces = MediaType.APPLICATION_JSON_VALUE
@@ -93,8 +79,11 @@ public class RegController {
 //            consumes = MediaType.APPLICATION_JSON_UTF8_VALUE
     )
     public ResponseEntity<?> getProductsByCategory(@RequestParam String category) {
-        List<Product> findBycategory = productRepository.findByCategory(category, new PageRequest(0, 10));
-        log.info("getProductsByCategory:category =" + category + ", content:" + findBycategory);
+        List<Product> findBycategory = !category.equals("undefined") ?
+                productRepository.findByCategory(category, new PageRequest(0, 10)) :
+                productRepository.findAll();
+        log.info("getProductsByCategory:category = " + category + ", content:" + findBycategory);
+
         return new ResponseEntity<>(findBycategory, HttpStatus.OK);
     }
 

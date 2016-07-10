@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8fe8ee6e-ee00-488a-9138-b2f41652fa5b" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/controller/UserService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/repositories/ProductRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/repositories/ProductRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/controller/RegController.java" afterPath="$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/controller/RegController.java" />
     </list>
     <ignored path="UserAuth.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,30 +47,44 @@
       <file leaf-file-name="RegController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/controller/RegController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-918">
-              <caret line="6" column="43" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
+            <state relative-caret-position="-102">
+              <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
               <folding>
-                <element signature="method#createProducts#0;class#RegController#0" expanded="false" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
-        <entry file="vcs://C:/Java_projects/Angular_Library/src/main/resources/application.properties">
+      <file leaf-file-name="UserService.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/controller/UserService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="430">
+              <caret line="43" column="5" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProductRepository.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/repositories/ProductRepository.java">
+      <file leaf-file-name="Application.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/Application.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#303#304#0" expanded="false" />
+                <element signature="e#365#366#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CategoryRepository.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/repositories/CategoryRepository.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
-              <caret line="13" column="54" selection-start-line="13" selection-start-column="54" selection-end-line="13" selection-end-column="54" />
+              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -85,34 +100,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Product.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/Entity/Product.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#Product#1;class#Product#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ReadTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ReadTest.java">
+      <file leaf-file-name="ContactRepository.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/repositories/ContactRepository.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
-              <caret line="15" column="44" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
+              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="false" />
               </folding>
@@ -120,12 +112,78 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+      <file leaf-file-name="PagingAndSortingRepository.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/1.11.4.RELEASE/spring-data-commons-1.11.4.RELEASE-sources.jar!/org/springframework/data/repository/PagingAndSortingRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="192" column="21" selection-start-line="192" selection-start-column="21" selection-end-line="192" selection-end-column="21" />
-              <folding />
+            <state relative-caret-position="204">
+              <caret line="30" column="12" selection-start-line="29" selection-start-column="16" selection-end-line="30" selection-end-column="12" />
+              <folding>
+                <element signature="e#0#1567#0" expanded="false" />
+                <element signature="imports" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Product.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/Entity/Product.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="13" column="25" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#383#384#0" expanded="false" />
+                <element signature="e#410#411#0" expanded="false" />
+                <element signature="e#891#892#0" expanded="false" />
+                <element signature="e#923#924#0" expanded="false" />
+                <element signature="e#993#994#0" expanded="false" />
+                <element signature="e#1025#1026#0" expanded="false" />
+                <element signature="e#1079#1080#0" expanded="false" />
+                <element signature="e#1121#1122#0" expanded="false" />
+                <element signature="e#1153#1154#0" expanded="false" />
+                <element signature="e#1181#1182#0" expanded="false" />
+                <element signature="e#1223#1224#0" expanded="false" />
+                <element signature="e#1257#1258#0" expanded="false" />
+                <element signature="e#1292#1293#0" expanded="false" />
+                <element signature="e#1323#1324#0" expanded="false" />
+                <element signature="e#1371#1372#0" expanded="false" />
+                <element signature="e#1411#1412#0" expanded="false" />
+                <element signature="e#1443#1444#0" expanded="false" />
+                <element signature="e#1471#1472#0" expanded="false" />
+                <element signature="e#1513#1514#0" expanded="false" />
+                <element signature="e#1547#1548#0" expanded="false" />
+                <element signature="e#1582#1583#0" expanded="false" />
+                <element signature="e#1613#1614#0" expanded="false" />
+                <element signature="e#1661#1662#0" expanded="false" />
+                <element signature="e#1701#1702#0" expanded="false" />
+                <element signature="e#1739#1740#0" expanded="false" />
+                <element signature="e#1773#1774#0" expanded="false" />
+                <element signature="e#1827#1828#0" expanded="false" />
+                <element signature="e#1873#1874#0" expanded="false" />
+                <element signature="method#Product#1;class#Product#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/Entity/User.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="493">
+              <caret line="31" column="28" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#1672#1673#0" expanded="false" />
+                <element signature="e#1714#1715#0" expanded="false" />
+                <element signature="e#1749#1750#0" expanded="false" />
+                <element signature="e#1780#1781#0" expanded="false" />
+                <element signature="e#1828#1829#0" expanded="false" />
+                <element signature="e#1868#1869#0" expanded="false" />
+                <element signature="e#1903#1904#0" expanded="false" />
+                <element signature="e#1934#1935#0" expanded="false" />
+                <element signature="e#1982#1983#0" expanded="false" />
+                <element signature="e#2022#2023#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -133,8 +191,8 @@
       <file leaf-file-name="Category.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/Entity/Category.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="16" column="22" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="22" />
+            <state relative-caret-position="85">
+              <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="false" />
                 <element signature="method#toString#0;class#Category#0" expanded="false" />
@@ -177,8 +235,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/repository/IContactRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/layout.html" />
         <option value="$PROJECT_DIR$/src/main/resources/static/css/style.css" />
         <option value="$PROJECT_DIR$/src/main/resources/static/css/sticky-footer-navbar.css" />
         <option value="$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/entity/AbstractEntity.java" />
@@ -225,9 +281,11 @@
         <option value="$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/Entity/Product.java" />
         <option value="$PROJECT_DIR$/src/main/java/ReadTest.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/repositories/ProductRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/repositories/ContactRepository.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/controller/RegController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/repositories/ProductRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/controller/UserService.java" />
       </list>
     </option>
   </component>
@@ -308,6 +366,21 @@
     <panes>
       <pane id="PackagesPane">
         <subPane />
+      </pane>
+      <pane id="Scratches" />
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="PhoneBook">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
       </pane>
       <pane id="ProjectPane">
         <subPane>
@@ -445,23 +518,38 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
           <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserAuth" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="PhoneBook">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Angular_Library" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -474,7 +562,7 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.appearance" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
-    <property name="SearchEverywhereHistoryKey" value="User&#9;FILE&#9;file://C:/Java_projects/Angular_Library/src/main/java/com/proxsoftware/webapp/Entity/User.java&#10;ConCon&#9;PSI&#9;JAVA://com.proxsoftware.webapp.controller.ContactController&#10;AcCon&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/java/com/proxsoftware/webapp/controller/AccountController.java&#10;AccCon&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/java/com/proxsoftware/webapp/controller/AccountController.java&#10;AccCo&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/java/com/proxsoftware/webapp/controller/AccountController.java&#10;ConE&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/java/com/proxsoftware/webapp/entity/ContactEntity.java&#10;com.proxsoftware.webapp.repository.Test&#9;PSI&#9;JAVA://com.proxsoftware.webapp.repository.Test&#10;AcEn&#9;PSI&#9;JAVA://com.proxsoftware.webapp.entity.AccountEntity&#10;Con&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/java/com/proxsoftware/webapp/controller/AccountController.java&#10;AppliPr&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/resources/application.properties&#10;login&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/resources/templates/user/login.html&#10;REG&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/resources/templates/user/register.html&#10;AcC&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/java/com/proxsoftware/webapp/controller/AccountController.java&#10;AcEnti&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/java/com/proxsoftware/webapp/entity/AccountEntity.java&#10;sti&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/resources/static/css/sticky-footer-navbar.css&#10;signin&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/resources/static/css/signin.css&#10;edit&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/resources/templates/user/edit.html&#10;regi&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/resources/templates/user/register.html&#10;new&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/resources/templates/user/new.html&#10;ConCo&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/java/com/proxsoftware/webapp/controller/ContactController.java&#10;Entity&#9;PSI&#9;JAVA://com.proxsoftware.webapp.entity.AccountEntity&#10;Applica&#9;PSI&#9;JAVA://com.proxsoftware.webapp.Application&#10;Appl&#9;RUN_CONFIGURATION&#9;Application&#10;list&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/resources/templates/user/list.html&#10;register&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/resources/templates/user/register.html&#10;sig&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/resources/static/css/signin.css&#10;layout&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/resources/templates/layout.html&#10;Ac&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/java/com/proxsoftware/webapp/controller/ContactController.java&#10;Acc&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/java/com/proxsoftware/webapp/repository/AccountRepository.java&#10;regist&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/resources/templates/user/register.html&#10;sticky&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/resources/static/css/sticky-footer-navbar.css&#10;persis&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/java/META-INF/persistence.xml&#10;style&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/resources/static/css/style.css&#10;ConEn&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/java/com/proxsoftware/webapp/entity/ContactEntity.java&#10;AcCont&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/java/com/proxsoftware/webapp/controller/AccountController.java&#10;AccC&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/java/com/proxsoftware/webapp/controller/AccountController.java&#10;ConC&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/java/com/proxsoftware/webapp/controller/ContactController.java&#10;conC&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/java/com/proxsoftware/webapp/controller/ContactController.java&#10;index&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/resources/templates/user/index.html&#10;App&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/resources/application.properties&#10;Jpare&#9;FILE&#9;jar://C:/Users/Proxima/.m2/repository/org/springframework/data/spring-data-jpa/1.9.4.RELEASE/spring-data-jpa-1.9.4.RELEASE-sources.jar!/org/springframework/data/jpa/repository/JpaRepository.java&#10;ConSer&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/java/com/proxsoftware/webapp/service/ContactServiceImpl.java&#10;ContC&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/java/com/proxsoftware/webapp/controller/ContactController.java&#10;XmlCOn&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/java/com/proxsoftware/webapp/service/XmlIContactServiceImpl.java&#10;XmlCon&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/java/test/java/com/proxsoftware/webapp/repository/XmlContactRepositoryTest.java&#10;ConRe&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/java/com/proxsoftware/webapp/repository/IContactRepository.java&#10;ConCont&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/java/com/proxsoftware/webapp/controller/ContactController.java&#10;ConRepo&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/java/com/proxsoftware/webapp/repository/IContactRepository.java&#10;ConEnti&#9;PSI&#9;JAVA://com.proxsoftware.webapp.entity.ContactEntity&#10;AccountE&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/java/com/proxsoftware/webapp/entity/AccountEntity.java" />
+    <property name="SearchEverywhereHistoryKey" value="Crud&#9;FILE&#9;jar://C:/Users/Proxima/.m2/repository/org/springframework/data/spring-data-commons/1.11.4.RELEASE/spring-data-commons-1.11.4.RELEASE-sources.jar!/org/springframework/data/repository/CrudRepository.java&#10;User&#9;FILE&#9;file://C:/Java_projects/Angular_Library/src/main/java/com/proxsoftware/webapp/Entity/User.java&#10;ConCon&#9;PSI&#9;JAVA://com.proxsoftware.webapp.controller.ContactController&#10;AcCon&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/java/com/proxsoftware/webapp/controller/AccountController.java&#10;AccCon&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/java/com/proxsoftware/webapp/controller/AccountController.java&#10;AccCo&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/java/com/proxsoftware/webapp/controller/AccountController.java&#10;ConE&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/java/com/proxsoftware/webapp/entity/ContactEntity.java&#10;com.proxsoftware.webapp.repository.Test&#9;PSI&#9;JAVA://com.proxsoftware.webapp.repository.Test&#10;AcEn&#9;PSI&#9;JAVA://com.proxsoftware.webapp.entity.AccountEntity&#10;Con&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/java/com/proxsoftware/webapp/controller/AccountController.java&#10;AppliPr&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/resources/application.properties&#10;login&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/resources/templates/user/login.html&#10;REG&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/resources/templates/user/register.html&#10;AcC&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/java/com/proxsoftware/webapp/controller/AccountController.java&#10;AcEnti&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/java/com/proxsoftware/webapp/entity/AccountEntity.java&#10;sti&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/resources/static/css/sticky-footer-navbar.css&#10;signin&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/resources/static/css/signin.css&#10;edit&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/resources/templates/user/edit.html&#10;regi&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/resources/templates/user/register.html&#10;new&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/resources/templates/user/new.html&#10;ConCo&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/java/com/proxsoftware/webapp/controller/ContactController.java&#10;Entity&#9;PSI&#9;JAVA://com.proxsoftware.webapp.entity.AccountEntity&#10;Applica&#9;PSI&#9;JAVA://com.proxsoftware.webapp.Application&#10;Appl&#9;RUN_CONFIGURATION&#9;Application&#10;list&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/resources/templates/user/list.html&#10;register&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/resources/templates/user/register.html&#10;sig&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/resources/static/css/signin.css&#10;layout&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/resources/templates/layout.html&#10;Ac&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/java/com/proxsoftware/webapp/controller/ContactController.java&#10;Acc&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/java/com/proxsoftware/webapp/repository/AccountRepository.java&#10;regist&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/resources/templates/user/register.html&#10;sticky&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/resources/static/css/sticky-footer-navbar.css&#10;persis&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/java/META-INF/persistence.xml&#10;style&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/resources/static/css/style.css&#10;ConEn&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/java/com/proxsoftware/webapp/entity/ContactEntity.java&#10;AcCont&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/java/com/proxsoftware/webapp/controller/AccountController.java&#10;AccC&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/java/com/proxsoftware/webapp/controller/AccountController.java&#10;ConC&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/java/com/proxsoftware/webapp/controller/ContactController.java&#10;conC&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/java/com/proxsoftware/webapp/controller/ContactController.java&#10;index&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/resources/templates/user/index.html&#10;App&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/resources/application.properties&#10;Jpare&#9;FILE&#9;jar://C:/Users/Proxima/.m2/repository/org/springframework/data/spring-data-jpa/1.9.4.RELEASE/spring-data-jpa-1.9.4.RELEASE-sources.jar!/org/springframework/data/jpa/repository/JpaRepository.java&#10;ConSer&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/java/com/proxsoftware/webapp/service/ContactServiceImpl.java&#10;ContC&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/java/com/proxsoftware/webapp/controller/ContactController.java&#10;XmlCOn&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/java/com/proxsoftware/webapp/service/XmlIContactServiceImpl.java&#10;XmlCon&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/java/test/java/com/proxsoftware/webapp/repository/XmlContactRepositoryTest.java&#10;ConRe&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/java/com/proxsoftware/webapp/repository/IContactRepository.java&#10;ConCont&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/java/com/proxsoftware/webapp/controller/ContactController.java&#10;ConRepo&#9;FILE&#9;file://C:/in_net/PhoneBook/src/main/java/com/proxsoftware/webapp/repository/IContactRepository.java&#10;ConEnti&#9;PSI&#9;JAVA://com.proxsoftware.webapp.entity.ContactEntity" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
     <property name="extract.method.default.visibility" value="private" />
@@ -1154,7 +1242,12 @@
       <workItem from="1467237250345" duration="724000" />
       <workItem from="1467270569354" duration="1056000" />
       <workItem from="1467456312643" duration="1644000" />
-      <workItem from="1467734044859" duration="8812000" />
+      <workItem from="1467734044859" duration="9892000" />
+      <workItem from="1467911556621" duration="1461000" />
+      <workItem from="1468067041930" duration="9003000" />
+      <workItem from="1468095914437" duration="32000" />
+      <workItem from="1468150995184" duration="1298000" />
+      <workItem from="1468165622606" duration="3074000" />
     </task>
     <servers />
   </component>
@@ -1191,7 +1284,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="424308000" />
+    <option name="totallyTimeSpent" value="440256000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1203,8 +1296,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1" y="1" width="1364" height="726" extended-state="0" />
-    <editor active="true" />
+    <frame x="1" y="1" width="1364" height="726" extended-state="1" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45959595" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1215,13 +1308,13 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3564189" sideWeight="0.5048544" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2880259" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.75420874" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46801347" sideWeight="0.49514562" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.85016835" sideWeight="0.49514562" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6127451" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5050505" sideWeight="0.4969743" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5050505" sideWeight="0.4969743" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.226227" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25920245" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2038835" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1436,16 +1529,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.11/junit-4.11-sources.jar!/org/junit/runners/model/FrameworkMethod.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/test/service/ContactServiceImplTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/app.properties" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/controller/ContactController.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/Solution.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/controller/ValidationController.java" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/app.css" />
@@ -1484,14 +1567,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/config/WebConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="12" column="36" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/1.11.4.RELEASE/spring-data-commons-1.11.4.RELEASE-sources.jar!/org/springframework/data/domain/Sort.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -1510,13 +1585,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="207" column="0" selection-start-line="207" selection-start-column="0" selection-end-line="207" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/Entity/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="24" column="64" selection-start-line="24" selection-start-column="64" selection-end-line="24" selection-end-column="64" />
         </state>
       </provider>
     </entry>
@@ -1545,7 +1613,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1581">
           <caret line="93" column="1" selection-start-line="93" selection-start-column="1" selection-end-line="93" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1556,43 +1623,222 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/repositories/CategoryRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="9" column="81" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="81" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.2.5.RELEASE/spring-web-4.2.5.RELEASE-sources.jar!/org/springframework/web/bind/annotation/RequestMapping.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="188">
           <caret line="288" column="18" selection-start-line="288" selection-start-column="18" selection-end-line="288" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/angular.js" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/1.11.4.RELEASE/spring-data-commons-1.11.4.RELEASE-sources.jar!/org/springframework/data/annotation/Id.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="31" column="18" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/1.11.4.RELEASE/spring-data-commons-1.11.4.RELEASE-sources.jar!/org/springframework/data/domain/PageRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3264">
+          <caret line="192" column="21" selection-start-line="192" selection-start-column="21" selection-end-line="192" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/1.3.3.RELEASE/spring-boot-autoconfigure-1.3.3.RELEASE-sources.jar!/org/springframework/boot/autoconfigure/SpringBootApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="45" column="14" selection-start-line="45" selection-start-column="14" selection-end-line="45" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ReadTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="15" column="44" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/config/WebConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="12" column="36" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
+          <folding>
+            <element signature="e#490#491#0" expanded="false" />
+            <element signature="e#532#533#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/repositories/ProductRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="13" column="54" selection-start-line="13" selection-start-column="54" selection-end-line="13" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/1.11.4.RELEASE/spring-data-commons-1.11.4.RELEASE-sources.jar!/org/springframework/data/repository/CrudRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="6" />
+        <state relative-caret-position="119">
+          <caret line="26" column="20" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
+          <folding>
+            <element signature="docComment;class#CrudRepository#0" expanded="false" />
+            <element signature="docComment;method#save#0;class#CrudRepository#0" expanded="false" />
+            <element signature="docComment;method#save#1;class#CrudRepository#0" expanded="false" />
+            <element signature="docComment;method#findOne#0;class#CrudRepository#0" expanded="false" />
+            <element signature="docComment;method#exists#0;class#CrudRepository#0" expanded="false" />
+            <element signature="docComment;method#findAll#0;class#CrudRepository#0" expanded="false" />
+            <element signature="docComment;method#findAll#1;class#CrudRepository#0" expanded="false" />
+            <element signature="docComment;method#count#0;class#CrudRepository#0" expanded="false" />
+            <element signature="docComment;method#delete#0;class#CrudRepository#0" expanded="false" />
+            <element signature="docComment;method#delete#1;class#CrudRepository#0" expanded="false" />
+            <element signature="docComment;method#delete#2;class#CrudRepository#0" expanded="false" />
+            <element signature="docComment;method#deleteAll#0;class#CrudRepository#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-mongodb/1.8.4.RELEASE/spring-data-mongodb-1.8.4.RELEASE-sources.jar!/org/springframework/data/mongodb/repository/MongoRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="43" column="7" selection-start-line="43" selection-start-column="7" selection-end-line="43" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#303#304#0" expanded="false" />
+            <element signature="e#365#366#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/repositories/CategoryRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="18" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/repositories/ContactRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="9" column="74" selection-start-line="9" selection-start-column="74" selection-end-line="9" selection-end-column="74" />
-          <folding />
+        <state relative-caret-position="136">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/1.11.4.RELEASE/spring-data-commons-1.11.4.RELEASE-sources.jar!/org/springframework/data/repository/PagingAndSortingRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="30" column="12" selection-start-line="29" selection-start-column="16" selection-end-line="30" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#1567#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/Entity/Product.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="13" column="25" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#383#384#0" expanded="false" />
+            <element signature="e#410#411#0" expanded="false" />
+            <element signature="e#891#892#0" expanded="false" />
+            <element signature="e#923#924#0" expanded="false" />
+            <element signature="e#993#994#0" expanded="false" />
+            <element signature="e#1025#1026#0" expanded="false" />
+            <element signature="e#1079#1080#0" expanded="false" />
+            <element signature="e#1121#1122#0" expanded="false" />
+            <element signature="e#1153#1154#0" expanded="false" />
+            <element signature="e#1181#1182#0" expanded="false" />
+            <element signature="e#1223#1224#0" expanded="false" />
+            <element signature="e#1257#1258#0" expanded="false" />
+            <element signature="e#1292#1293#0" expanded="false" />
+            <element signature="e#1323#1324#0" expanded="false" />
+            <element signature="e#1371#1372#0" expanded="false" />
+            <element signature="e#1411#1412#0" expanded="false" />
+            <element signature="e#1443#1444#0" expanded="false" />
+            <element signature="e#1471#1472#0" expanded="false" />
+            <element signature="e#1513#1514#0" expanded="false" />
+            <element signature="e#1547#1548#0" expanded="false" />
+            <element signature="e#1582#1583#0" expanded="false" />
+            <element signature="e#1613#1614#0" expanded="false" />
+            <element signature="e#1661#1662#0" expanded="false" />
+            <element signature="e#1701#1702#0" expanded="false" />
+            <element signature="e#1739#1740#0" expanded="false" />
+            <element signature="e#1773#1774#0" expanded="false" />
+            <element signature="e#1827#1828#0" expanded="false" />
+            <element signature="e#1873#1874#0" expanded="false" />
+            <element signature="method#Product#1;class#Product#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/Entity/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="31" column="28" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1672#1673#0" expanded="false" />
+            <element signature="e#1714#1715#0" expanded="false" />
+            <element signature="e#1749#1750#0" expanded="false" />
+            <element signature="e#1780#1781#0" expanded="false" />
+            <element signature="e#1828#1829#0" expanded="false" />
+            <element signature="e#1868#1869#0" expanded="false" />
+            <element signature="e#1903#1904#0" expanded="false" />
+            <element signature="e#1934#1935#0" expanded="false" />
+            <element signature="e#1982#1983#0" expanded="false" />
+            <element signature="e#2022#2023#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/Entity/Category.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="16" column="22" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="22" />
+        <state relative-caret-position="85">
+          <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="false" />
             <element signature="method#toString#0;class#Category#0" expanded="false" />
@@ -1612,98 +1858,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-165">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding>
-            <element signature="e#365#366#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/1.11.4.RELEASE/spring-data-commons-1.11.4.RELEASE-sources.jar!/org/springframework/data/annotation/Id.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="31" column="18" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ReadTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="15" column="44" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="192" column="21" selection-start-line="192" selection-start-column="21" selection-end-line="192" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/1.11.4.RELEASE/spring-data-commons-1.11.4.RELEASE-sources.jar!/org/springframework/data/domain/PageRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="18" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/Entity/Product.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#Product#1;class#Product#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/controller/RegController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-918">
-          <caret line="6" column="43" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
+        <state relative-caret-position="-102">
+          <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
           <folding>
-            <element signature="method#createProducts#0;class#RegController#0" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/repositories/ProductRepository.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/controller/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="13" column="54" selection-start-line="13" selection-start-column="54" selection-end-line="13" selection-end-column="54" />
+        <state relative-caret-position="430">
+          <caret line="43" column="5" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
           <folding />
         </state>
       </provider>
