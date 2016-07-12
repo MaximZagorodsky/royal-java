@@ -9,6 +9,7 @@ import com.proxsoftware.webapp.repositories.ProductRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -35,6 +36,9 @@ public class RegController {
     @Autowired
     private ProductRepository productRepository;
 
+    @Autowired
+    ApplicationContext applicationContext;
+
 
 
     @RequestMapping(value = "/categories", method = RequestMethod.GET,
@@ -42,7 +46,9 @@ public class RegController {
     )
     public ResponseEntity<?> getCategories() {
         List<Category> allCategories = categoryRepository.findAll();
-        log.info("categories get:" + allCategories);
+//        log.info("categories get:" + allCategories);
+        System.out.println("AppContext: "+applicationContext.getClassLoader().getClass());
+        System.out.println("AppContext: "+applicationContext.getClass());
         return new ResponseEntity<>(allCategories, HttpStatus.OK);
     }
 
