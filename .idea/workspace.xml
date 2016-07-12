@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8fe8ee6e-ee00-488a-9138-b2f41652fa5b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/controller/UserService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/Entity/Error.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/controller/AbstractController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/controller/CategoryController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/controller/RegController.java" afterPath="$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/controller/ProductController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/repositories/ContactRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/repositories/UserRepository.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/controller/RegController.java" afterPath="$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/controller/RegController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/controller/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/controller/UserService.java" />
     </list>
     <ignored path="UserAuth.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -44,24 +48,206 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="RegController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/controller/RegController.java">
+      <file leaf-file-name="ProductController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/controller/ProductController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-102">
-              <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
+            <state relative-caret-position="1071">
+              <caret line="74" column="37" selection-start-line="74" selection-start-column="37" selection-end-line="74" selection-end-column="37" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="imports" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserService.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ProductRepository.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/repositories/ProductRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="13" column="54" selection-start-line="13" selection-start-column="54" selection-end-line="13" selection-end-column="54" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CategoryController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/controller/CategoryController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/controller/UserService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="430">
-              <caret line="43" column="5" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
+            <state relative-caret-position="612">
+              <caret line="50" column="36" selection-start-line="50" selection-start-column="36" selection-end-line="50" selection-end-column="36" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.properties" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="18" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ResponseEntity.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.2.5.RELEASE/spring-web-4.2.5.RELEASE-sources.jar!/org/springframework/http/ResponseEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="646">
+              <caret line="129" column="50" selection-start-line="129" selection-start-column="47" selection-end-line="129" selection-end-column="50" />
+              <folding>
+                <element signature="e#0#12848#0" expanded="false" />
+                <element signature="imports" expanded="false" />
+                <element signature="docComment;class#ResponseEntity#0" expanded="false" />
+                <element signature="docComment;method#ResponseEntity#0;class#ResponseEntity#0" expanded="false" />
+                <element signature="method#ResponseEntity#0;class#ResponseEntity#0" expanded="false" />
+                <element signature="docComment;method#ResponseEntity#1;class#ResponseEntity#0" expanded="false" />
+                <element signature="method#ResponseEntity#1;class#ResponseEntity#0" expanded="false" />
+                <element signature="docComment;method#ResponseEntity#2;class#ResponseEntity#0" expanded="false" />
+                <element signature="method#ResponseEntity#2;class#ResponseEntity#0" expanded="false" />
+                <element signature="docComment;method#ResponseEntity#3;class#ResponseEntity#0" expanded="false" />
+                <element signature="method#ResponseEntity#3;class#ResponseEntity#0" expanded="false" />
+                <element signature="docComment;method#getStatusCode#0;class#ResponseEntity#0" expanded="false" />
+                <element signature="e#3835#3836#0" expanded="false" />
+                <element signature="e#3864#3865#0" expanded="false" />
+                <element signature="e#4189#4190#0" expanded="false" />
+                <element signature="e#4274#4275#0" expanded="false" />
+                <element signature="method#toString#0;class#ResponseEntity#0" expanded="false" />
+                <element signature="docComment;method#status#0;class#ResponseEntity#0" expanded="false" />
+                <element signature="e#5012#5013#0" expanded="false" />
+                <element signature="e#5052#5053#0" expanded="false" />
+                <element signature="docComment;method#status#1;class#ResponseEntity#0" expanded="false" />
+                <element signature="e#5240#5241#0" expanded="false" />
+                <element signature="e#5288#5289#0" expanded="false" />
+                <element signature="docComment;method#ok#0;class#ResponseEntity#0" expanded="false" />
+                <element signature="e#5455#5456#0" expanded="false" />
+                <element signature="e#5490#5491#0" expanded="false" />
+                <element signature="docComment;method#ok#1;class#ResponseEntity#0" expanded="false" />
+                <element signature="method#ok#1;class#ResponseEntity#0" expanded="false" />
+                <element signature="docComment;method#created#0;class#ResponseEntity#0" expanded="false" />
+                <element signature="method#created#0;class#ResponseEntity#0" expanded="false" />
+                <element signature="docComment;method#accepted#0;class#ResponseEntity#0" expanded="false" />
+                <element signature="e#6347#6348#0" expanded="false" />
+                <element signature="e#6388#6389#0" expanded="false" />
+                <element signature="docComment;method#noContent#0;class#ResponseEntity#0" expanded="false" />
+                <element signature="e#6575#6576#0" expanded="false" />
+                <element signature="e#6618#6619#0" expanded="false" />
+                <element signature="docComment;method#badRequest#0;class#ResponseEntity#0" expanded="false" />
+                <element signature="e#6802#6803#0" expanded="false" />
+                <element signature="e#6846#6847#0" expanded="false" />
+                <element signature="docComment;method#notFound#0;class#ResponseEntity#0" expanded="false" />
+                <element signature="e#7030#7031#0" expanded="false" />
+                <element signature="e#7072#7073#0" expanded="false" />
+                <element signature="docComment;method#unprocessableEntity#0;class#ResponseEntity#0" expanded="false" />
+                <element signature="e#7290#7291#0" expanded="false" />
+                <element signature="e#7343#7344#0" expanded="false" />
+                <element signature="docComment;class#HeadersBuilder#0;class#ResponseEntity#0" expanded="false" />
+                <element signature="class#HeadersBuilder#0;class#ResponseEntity#0" expanded="false" />
+                <element signature="docComment;method#header#0;class#HeadersBuilder#0;class#ResponseEntity#0" expanded="false" />
+                <element signature="docComment;method#headers#0;class#HeadersBuilder#0;class#ResponseEntity#0" expanded="false" />
+                <element signature="docComment;method#allow#0;class#HeadersBuilder#0;class#ResponseEntity#0" expanded="false" />
+                <element signature="docComment;method#eTag#0;class#HeadersBuilder#0;class#ResponseEntity#0" expanded="false" />
+                <element signature="docComment;method#lastModified#0;class#HeadersBuilder#0;class#ResponseEntity#0" expanded="false" />
+                <element signature="docComment;method#location#0;class#HeadersBuilder#0;class#ResponseEntity#0" expanded="false" />
+                <element signature="docComment;method#cacheControl#0;class#HeadersBuilder#0;class#ResponseEntity#0" expanded="false" />
+                <element signature="docComment;method#build#0;class#HeadersBuilder#0;class#ResponseEntity#0" expanded="false" />
+                <element signature="docComment;class#BodyBuilder#0;class#ResponseEntity#0" expanded="false" />
+                <element signature="class#BodyBuilder#0;class#ResponseEntity#0" expanded="false" />
+                <element signature="docComment;method#contentLength#0;class#BodyBuilder#0;class#ResponseEntity#0" expanded="false" />
+                <element signature="docComment;method#contentType#0;class#BodyBuilder#0;class#ResponseEntity#0" expanded="false" />
+                <element signature="docComment;method#body#0;class#BodyBuilder#0;class#ResponseEntity#0" expanded="false" />
+                <element signature="class#DefaultBuilder#0;class#ResponseEntity#0" expanded="false" />
+                <element signature="e#10979#10980#0" expanded="false" />
+                <element signature="e#11008#11009#0" expanded="false" />
+                <element signature="method#header#0;class#DefaultBuilder#0;class#ResponseEntity#0" expanded="false" />
+                <element signature="method#headers#0;class#DefaultBuilder#0;class#ResponseEntity#0" expanded="false" />
+                <element signature="method#allow#0;class#DefaultBuilder#0;class#ResponseEntity#0" expanded="false" />
+                <element signature="method#contentLength#0;class#DefaultBuilder#0;class#ResponseEntity#0" expanded="false" />
+                <element signature="method#contentType#0;class#DefaultBuilder#0;class#ResponseEntity#0" expanded="false" />
+                <element signature="method#eTag#0;class#DefaultBuilder#0;class#ResponseEntity#0" expanded="false" />
+                <element signature="method#lastModified#0;class#DefaultBuilder#0;class#ResponseEntity#0" expanded="false" />
+                <element signature="method#location#0;class#DefaultBuilder#0;class#ResponseEntity#0" expanded="false" />
+                <element signature="method#cacheControl#0;class#DefaultBuilder#0;class#ResponseEntity#0" expanded="false" />
+                <element signature="e#12638#12639#0" expanded="false" />
+                <element signature="e#12711#12712#0" expanded="false" />
+                <element signature="e#12770#12771#0" expanded="false" />
+                <element signature="e#12840#12841#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Error.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/Entity/Error.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="37" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
+              <folding>
+                <element signature="e#268#269#0" expanded="false" />
+                <element signature="e#316#317#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HttpStatus.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.2.5.RELEASE/spring-web-4.2.5.RELEASE-sources.jar!/org/springframework/http/HttpStatus.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2924">
+              <caret line="186" column="4" selection-start-line="186" selection-start-column="4" selection-end-line="186" selection-end-column="4" />
+              <folding>
+                <element signature="e#0#18133#0" expanded="false" />
+                <element signature="e#14864#14865#0" expanded="false" />
+                <element signature="e#14888#14889#0" expanded="false" />
+                <element signature="e#14984#14985#0" expanded="false" />
+                <element signature="e#15010#15011#0" expanded="false" />
+                <element signature="e#15249#15250#0" expanded="false" />
+                <element signature="e#15302#15303#0" expanded="false" />
+                <element signature="e#15535#15536#0" expanded="false" />
+                <element signature="e#15585#15586#0" expanded="false" />
+                <element signature="e#15820#15821#0" expanded="false" />
+                <element signature="e#15871#15872#0" expanded="false" />
+                <element signature="e#16108#16109#0" expanded="false" />
+                <element signature="e#16160#16161#0" expanded="false" />
+                <element signature="e#16396#16397#0" expanded="false" />
+                <element signature="e#16448#16449#0" expanded="false" />
+                <element signature="e#16568#16569#0" expanded="false" />
+                <element signature="e#16602#16603#0" expanded="false" />
+                <element signature="e#16708#16709#0" expanded="false" />
+                <element signature="e#16745#16746#0" expanded="false" />
+                <element signature="e#17599#17600#0" expanded="false" />
+                <element signature="e#17626#17627#0" expanded="false" />
+                <element signature="e#17735#17736#0" expanded="false" />
+                <element signature="e#17761#17762#0" expanded="false" />
+                <element signature="e#18087#18088#0" expanded="false" />
+                <element signature="e#18124#18125#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReadTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ReadTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="15" column="44" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -85,26 +271,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
               <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="18" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ContactRepository.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/repositories/ContactRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="false" />
               </folding>
@@ -112,13 +278,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PagingAndSortingRepository.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/1.11.4.RELEASE/spring-data-commons-1.11.4.RELEASE-sources.jar!/org/springframework/data/repository/PagingAndSortingRepository.java">
+      <file leaf-file-name="UserRepository.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/repositories/UserRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="30" column="12" selection-start-line="29" selection-start-column="16" selection-end-line="30" selection-end-column="12" />
+            <state relative-caret-position="102">
+              <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AbstractController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/controller/AbstractController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="21" column="55" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="55" />
               <folding>
-                <element signature="e#0#1567#0" expanded="false" />
                 <element signature="imports" expanded="false" />
               </folding>
             </state>
@@ -169,8 +344,8 @@
       <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/Entity/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="31" column="28" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
+            <state relative-caret-position="119">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="false" />
                 <element signature="e#1672#1673#0" expanded="false" />
@@ -235,11 +410,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/resources/static/css/style.css" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/css/sticky-footer-navbar.css" />
-        <option value="$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/entity/AbstractEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/user/login.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/user/register.html" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/controller/AccountController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/service/ContactServiceImpl.java" />
@@ -273,7 +443,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/config/WebConfiguration.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/Entity/Categories.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/repositories/MongoRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/Entity/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/repositories/MongoRepo.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/repositories/CategoryRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/Entity/Category.java" />
@@ -285,6 +454,12 @@
         <option value="$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/repositories/ContactRepository.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/controller/RegController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/controller/CategoryController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/controller/AbstractController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/Entity/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/controller/ProductController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/repositories/UserRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/Entity/Error.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/controller/UserService.java" />
       </list>
     </option>
@@ -312,10 +487,9 @@
     <treeState />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1" />
-    <option name="y" value="1" />
-    <option name="width" value="1364" />
-    <option name="height" value="726" />
+    <option name="x" value="8" />
+    <option name="width" value="1888" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -367,7 +541,6 @@
       <pane id="PackagesPane">
         <subPane />
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope">
         <subPane subId="Project Files">
           <PATH>
@@ -397,24 +570,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Angular_Library" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="UserAuth" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Angular_Library" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -544,18 +699,49 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Entity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserAuth" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Angular_Library" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="controller" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../PhoneBook" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.1543379" />
     <property name="project.structure.side.proportion" value="0.50753295" />
@@ -1248,6 +1434,9 @@
       <workItem from="1468095914437" duration="32000" />
       <workItem from="1468150995184" duration="1298000" />
       <workItem from="1468165622606" duration="3074000" />
+      <workItem from="1468242849422" duration="6833000" />
+      <workItem from="1468267566367" duration="655000" />
+      <workItem from="1468320113822" duration="1435000" />
     </task>
     <servers />
   </component>
@@ -1284,7 +1473,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="440256000" />
+    <option name="totallyTimeSpent" value="449179000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1296,25 +1485,23 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1" y="1" width="1364" height="726" extended-state="1" />
+    <frame x="8" y="0" width="1888" height="1040" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45959595" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4006734" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3564189" sideWeight="0.5048544" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2880259" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.75420874" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.85016835" sideWeight="0.49514562" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6127451" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5050505" sideWeight="0.4969743" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25920245" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25875273" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2038835" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1322,14 +1509,16 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5627753" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5627753" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39977974" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TunnelliJ" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" x="226" y="100" width="1041" height="513" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39869282" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34030837" sideWeight="0.49514562" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928678" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32659933" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1529,11 +1718,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/Solution.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/controller/ValidationController.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/app.css" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/controller.js" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/app.js" />
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/resources/html5-schema/html5/structural.rnc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="574">
@@ -1574,13 +1758,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-mongodb/1.9.2.RELEASE/spring-data-mongodb-1.9.2.RELEASE-sources.jar!/org/springframework/data/mongodb/repository/MongoRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="35" column="17" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-mongodb/1.9.2.RELEASE/spring-data-mongodb-1.9.2.RELEASE-sources.jar!/org/springframework/data/mongodb/repository/MongoRepository.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/4.2.5.RELEASE/spring-aop-4.2.5.RELEASE-sources.jar!/org/springframework/aop/framework/JdkDynamicAopProxy.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -1674,13 +1852,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ReadTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="15" column="44" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/config/WebConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -1689,13 +1860,6 @@
             <element signature="e#490#491#0" expanded="false" />
             <element signature="e#532#533#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/repositories/ProductRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="13" column="54" selection-start-line="13" selection-start-column="54" selection-end-line="13" selection-end-column="54" />
         </state>
       </provider>
     </entry>
@@ -1739,40 +1903,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/repositories/CategoryRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="18" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/repositories/ContactRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/1.11.4.RELEASE/spring-data-commons-1.11.4.RELEASE-sources.jar!/org/springframework/data/repository/PagingAndSortingRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="30" column="12" selection-start-line="29" selection-start-column="16" selection-end-line="30" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#1567#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1815,26 +1949,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/Entity/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="31" column="28" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1672#1673#0" expanded="false" />
-            <element signature="e#1714#1715#0" expanded="false" />
-            <element signature="e#1749#1750#0" expanded="false" />
-            <element signature="e#1780#1781#0" expanded="false" />
-            <element signature="e#1828#1829#0" expanded="false" />
-            <element signature="e#1868#1869#0" expanded="false" />
-            <element signature="e#1903#1904#0" expanded="false" />
-            <element signature="e#1934#1935#0" expanded="false" />
-            <element signature="e#1982#1983#0" expanded="false" />
-            <element signature="e#2022#2023#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/Entity/Category.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -1858,20 +1972,236 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/controller/RegController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/Entity/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-102">
-          <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
+        <state relative-caret-position="119">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1672#1673#0" expanded="false" />
+            <element signature="e#1714#1715#0" expanded="false" />
+            <element signature="e#1749#1750#0" expanded="false" />
+            <element signature="e#1780#1781#0" expanded="false" />
+            <element signature="e#1828#1829#0" expanded="false" />
+            <element signature="e#1868#1869#0" expanded="false" />
+            <element signature="e#1903#1904#0" expanded="false" />
+            <element signature="e#1934#1935#0" expanded="false" />
+            <element signature="e#1982#1983#0" expanded="false" />
+            <element signature="e#2022#2023#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/repositories/CategoryRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/repositories/ProductRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="13" column="54" selection-start-line="13" selection-start-column="54" selection-end-line="13" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/controller/CategoryController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.2.5.RELEASE/spring-web-4.2.5.RELEASE-sources.jar!/org/springframework/http/HttpStatus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2924">
+          <caret line="186" column="4" selection-start-line="186" selection-start-column="4" selection-end-line="186" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#18133#0" expanded="false" />
+            <element signature="e#14864#14865#0" expanded="false" />
+            <element signature="e#14888#14889#0" expanded="false" />
+            <element signature="e#14984#14985#0" expanded="false" />
+            <element signature="e#15010#15011#0" expanded="false" />
+            <element signature="e#15249#15250#0" expanded="false" />
+            <element signature="e#15302#15303#0" expanded="false" />
+            <element signature="e#15535#15536#0" expanded="false" />
+            <element signature="e#15585#15586#0" expanded="false" />
+            <element signature="e#15820#15821#0" expanded="false" />
+            <element signature="e#15871#15872#0" expanded="false" />
+            <element signature="e#16108#16109#0" expanded="false" />
+            <element signature="e#16160#16161#0" expanded="false" />
+            <element signature="e#16396#16397#0" expanded="false" />
+            <element signature="e#16448#16449#0" expanded="false" />
+            <element signature="e#16568#16569#0" expanded="false" />
+            <element signature="e#16602#16603#0" expanded="false" />
+            <element signature="e#16708#16709#0" expanded="false" />
+            <element signature="e#16745#16746#0" expanded="false" />
+            <element signature="e#17599#17600#0" expanded="false" />
+            <element signature="e#17626#17627#0" expanded="false" />
+            <element signature="e#17735#17736#0" expanded="false" />
+            <element signature="e#17761#17762#0" expanded="false" />
+            <element signature="e#18087#18088#0" expanded="false" />
+            <element signature="e#18124#18125#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/controller/ProductController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1071">
+          <caret line="74" column="37" selection-start-line="74" selection-start-column="37" selection-end-line="74" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ReadTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="15" column="44" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/repositories/UserRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/controller/AbstractController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="21" column="55" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/Entity/Error.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="37" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
+          <folding>
+            <element signature="e#268#269#0" expanded="false" />
+            <element signature="e#316#317#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.2.5.RELEASE/spring-web-4.2.5.RELEASE-sources.jar!/org/springframework/http/ResponseEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="129" column="50" selection-start-line="129" selection-start-column="47" selection-end-line="129" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#12848#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="docComment;class#ResponseEntity#0" expanded="false" />
+            <element signature="docComment;method#ResponseEntity#0;class#ResponseEntity#0" expanded="false" />
+            <element signature="method#ResponseEntity#0;class#ResponseEntity#0" expanded="false" />
+            <element signature="docComment;method#ResponseEntity#1;class#ResponseEntity#0" expanded="false" />
+            <element signature="method#ResponseEntity#1;class#ResponseEntity#0" expanded="false" />
+            <element signature="docComment;method#ResponseEntity#2;class#ResponseEntity#0" expanded="false" />
+            <element signature="method#ResponseEntity#2;class#ResponseEntity#0" expanded="false" />
+            <element signature="docComment;method#ResponseEntity#3;class#ResponseEntity#0" expanded="false" />
+            <element signature="method#ResponseEntity#3;class#ResponseEntity#0" expanded="false" />
+            <element signature="docComment;method#getStatusCode#0;class#ResponseEntity#0" expanded="false" />
+            <element signature="e#3835#3836#0" expanded="false" />
+            <element signature="e#3864#3865#0" expanded="false" />
+            <element signature="e#4189#4190#0" expanded="false" />
+            <element signature="e#4274#4275#0" expanded="false" />
+            <element signature="method#toString#0;class#ResponseEntity#0" expanded="false" />
+            <element signature="docComment;method#status#0;class#ResponseEntity#0" expanded="false" />
+            <element signature="e#5012#5013#0" expanded="false" />
+            <element signature="e#5052#5053#0" expanded="false" />
+            <element signature="docComment;method#status#1;class#ResponseEntity#0" expanded="false" />
+            <element signature="e#5240#5241#0" expanded="false" />
+            <element signature="e#5288#5289#0" expanded="false" />
+            <element signature="docComment;method#ok#0;class#ResponseEntity#0" expanded="false" />
+            <element signature="e#5455#5456#0" expanded="false" />
+            <element signature="e#5490#5491#0" expanded="false" />
+            <element signature="docComment;method#ok#1;class#ResponseEntity#0" expanded="false" />
+            <element signature="method#ok#1;class#ResponseEntity#0" expanded="false" />
+            <element signature="docComment;method#created#0;class#ResponseEntity#0" expanded="false" />
+            <element signature="method#created#0;class#ResponseEntity#0" expanded="false" />
+            <element signature="docComment;method#accepted#0;class#ResponseEntity#0" expanded="false" />
+            <element signature="e#6347#6348#0" expanded="false" />
+            <element signature="e#6388#6389#0" expanded="false" />
+            <element signature="docComment;method#noContent#0;class#ResponseEntity#0" expanded="false" />
+            <element signature="e#6575#6576#0" expanded="false" />
+            <element signature="e#6618#6619#0" expanded="false" />
+            <element signature="docComment;method#badRequest#0;class#ResponseEntity#0" expanded="false" />
+            <element signature="e#6802#6803#0" expanded="false" />
+            <element signature="e#6846#6847#0" expanded="false" />
+            <element signature="docComment;method#notFound#0;class#ResponseEntity#0" expanded="false" />
+            <element signature="e#7030#7031#0" expanded="false" />
+            <element signature="e#7072#7073#0" expanded="false" />
+            <element signature="docComment;method#unprocessableEntity#0;class#ResponseEntity#0" expanded="false" />
+            <element signature="e#7290#7291#0" expanded="false" />
+            <element signature="e#7343#7344#0" expanded="false" />
+            <element signature="docComment;class#HeadersBuilder#0;class#ResponseEntity#0" expanded="false" />
+            <element signature="class#HeadersBuilder#0;class#ResponseEntity#0" expanded="false" />
+            <element signature="docComment;method#header#0;class#HeadersBuilder#0;class#ResponseEntity#0" expanded="false" />
+            <element signature="docComment;method#headers#0;class#HeadersBuilder#0;class#ResponseEntity#0" expanded="false" />
+            <element signature="docComment;method#allow#0;class#HeadersBuilder#0;class#ResponseEntity#0" expanded="false" />
+            <element signature="docComment;method#eTag#0;class#HeadersBuilder#0;class#ResponseEntity#0" expanded="false" />
+            <element signature="docComment;method#lastModified#0;class#HeadersBuilder#0;class#ResponseEntity#0" expanded="false" />
+            <element signature="docComment;method#location#0;class#HeadersBuilder#0;class#ResponseEntity#0" expanded="false" />
+            <element signature="docComment;method#cacheControl#0;class#HeadersBuilder#0;class#ResponseEntity#0" expanded="false" />
+            <element signature="docComment;method#build#0;class#HeadersBuilder#0;class#ResponseEntity#0" expanded="false" />
+            <element signature="docComment;class#BodyBuilder#0;class#ResponseEntity#0" expanded="false" />
+            <element signature="class#BodyBuilder#0;class#ResponseEntity#0" expanded="false" />
+            <element signature="docComment;method#contentLength#0;class#BodyBuilder#0;class#ResponseEntity#0" expanded="false" />
+            <element signature="docComment;method#contentType#0;class#BodyBuilder#0;class#ResponseEntity#0" expanded="false" />
+            <element signature="docComment;method#body#0;class#BodyBuilder#0;class#ResponseEntity#0" expanded="false" />
+            <element signature="class#DefaultBuilder#0;class#ResponseEntity#0" expanded="false" />
+            <element signature="e#10979#10980#0" expanded="false" />
+            <element signature="e#11008#11009#0" expanded="false" />
+            <element signature="method#header#0;class#DefaultBuilder#0;class#ResponseEntity#0" expanded="false" />
+            <element signature="method#headers#0;class#DefaultBuilder#0;class#ResponseEntity#0" expanded="false" />
+            <element signature="method#allow#0;class#DefaultBuilder#0;class#ResponseEntity#0" expanded="false" />
+            <element signature="method#contentLength#0;class#DefaultBuilder#0;class#ResponseEntity#0" expanded="false" />
+            <element signature="method#contentType#0;class#DefaultBuilder#0;class#ResponseEntity#0" expanded="false" />
+            <element signature="method#eTag#0;class#DefaultBuilder#0;class#ResponseEntity#0" expanded="false" />
+            <element signature="method#lastModified#0;class#DefaultBuilder#0;class#ResponseEntity#0" expanded="false" />
+            <element signature="method#location#0;class#DefaultBuilder#0;class#ResponseEntity#0" expanded="false" />
+            <element signature="method#cacheControl#0;class#DefaultBuilder#0;class#ResponseEntity#0" expanded="false" />
+            <element signature="e#12638#12639#0" expanded="false" />
+            <element signature="e#12711#12712#0" expanded="false" />
+            <element signature="e#12770#12771#0" expanded="false" />
+            <element signature="e#12840#12841#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/proxsoftware/webapp/controller/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="43" column="5" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
+        <state relative-caret-position="612">
+          <caret line="50" column="36" selection-start-line="50" selection-start-column="36" selection-end-line="50" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="18" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
           <folding />
         </state>
       </provider>

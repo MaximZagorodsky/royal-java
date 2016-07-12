@@ -7,6 +7,7 @@ import org.springframework.stereotype.Repository;
 import java.math.BigInteger;
 
 @Repository
-public interface ContactRepository extends MongoRepository<User,BigInteger> {
+public interface UserRepository extends MongoRepository<User, BigInteger> {
+    User findOneByUsername(String name);
 
 }
