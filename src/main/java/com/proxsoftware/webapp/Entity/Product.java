@@ -1,4 +1,4 @@
-package com.proxsoftware.webapp.Entity;
+package com.proxsoftware.webapp.entity;
 
 
 import org.springframework.data.annotation.Id;

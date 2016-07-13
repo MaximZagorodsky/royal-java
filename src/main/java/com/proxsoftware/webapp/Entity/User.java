@@ -1,11 +1,11 @@
-package com.proxsoftware.webapp.Entity;
+package com.proxsoftware.webapp.entity;
 
 
 import org.springframework.data.annotation.Id;
 
 import java.math.BigInteger;
 
-//@Entity
+//@entity
 //@Table(name = "users")
 public class User {
     public static final int USERNAME_MIN_LENGTH = 5;

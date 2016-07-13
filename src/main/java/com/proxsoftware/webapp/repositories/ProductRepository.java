@@ -1,6 +1,6 @@
 package com.proxsoftware.webapp.repositories;
 
-import com.proxsoftware.webapp.Entity.Product;
+import com.proxsoftware.webapp.entity.Product;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
