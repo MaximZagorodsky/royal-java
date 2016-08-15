@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Royal CRM</title>
+
+    <!-- Latest compiled and minified CSS -->
+
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"-->
+    <!--integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"/>-->
+    <link rel="stylesheet" href="css\bootstrap.min.css"/>
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"
+          integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous"/>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+
+
+    <![endif]-->
+    <link href="http://getbootstrap.com/examples/dashboard/dashboard.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/nbStyles.css"/>
+
+
+</head>
+<body>
+
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Royal CRM</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="/login">Logout</a></li>
+            </ul>
+            <form class="navbar-form navbar-right">
+                <input type="text" class="form-control" placeholder="Search..."/>
+
+                <p th:text="${#dates.format(#calendars.createForTimeZone(#calendars.year(managerDTOs[0].orderDay),
+                 #calendars.month(managerDTOs[0].orderDay),
+                 #calendars.day(managerDTOs[0].orderDay), #calendars.hour(managerDTOs[0].orderDay), #calendars.minute(managerDTOs[0].orderDay),'UK'), 'yyyy-MMM-dd HH:mm')}"></p>
+
+
+            </form>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid">
+
+    <div class="row">
+        <nav class="ch">
+            <a class="aov" href="../index.html">
+                <span class="bv act aow"></span>
+            </a>
+            <div class="aoz">
+                <ul class="nav of aox">
+                    <li>
+                        <a data-original-title="Signed in as mdo" href="#" title="" data-toggle="tooltip"
+                           data-placement="right" data-container="body">
+                            <!--<img src="/images/avatars.png" alt="" class="cs cn"/>-->
+                        </a>
+                    </li>
+                    <li>
+                        <a data-original-title="Overview" href="/Dashboard" title="" data-toggle="tooltip"
+                           data-placement="right" data-container="body">
+                            <span class="glyphicon glyphicon-search bv aie"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a data-original-title="Order history" href="/Lead" title="" data-toggle="tooltip"
+                           data-placement="right" data-container="body">
+                            <span class="glyphicon glyphicon-search bv abw"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a data-original-title="Fluid layout" href="/Follow-up" title="" data-toggle="tooltip"
+                           data-placement="right" data-container="body">
+                            <span class="glyphicon glyphicon-search bv abh"></span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a data-original-title="Icon-nav layout" href="/E-mail" title="" data-toggle="tooltip"
+                           data-placement="right" data-container="body">
+                            <span class="glyphicon glyphicon-search bv vd"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a data-original-title="Docs" href="/calendar" title="" data-toggle="tooltip"
+                           data-placement="right" data-container="body">
+                            <span class="glyphicon glyphicon-search bv ade"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a data-original-title="Light UI" href="/Task manager" title="" data-toggle="tooltip"
+                           data-placement="right" data-container="body">
+                            <span class="glyphicon glyphicon-search bv aak"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a data-original-title="Light UI" href="/order" title="" data-toggle="tooltip"
+                           data-placement="right" data-container="body">
+                            <span class="glyphicon glyphicon-search bv aak"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+
+        <form class="form" action="/manager" th:object="${managerForm}" th:action="@{/manager}" id="managerForm"
+              method="post">
+            <div class="col-sm-9  col-md-10 col-md-offset-1 main">
+
+                <!-- CLIENT INFO-->
+                <!--<h2 class="page-header "> Manager board </h2>-->
+                <div class="panel panel-default">
+                    <!-- Default panel contents -->
+                    <div class="panel-heading">Manager board</div>
+
+                    <!-- Table -->
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>Order#</th>
+                            <th>Time</th>
+                            <th>Client info</th>
+                            <th>Address</th>
+                            <th>Value</th>
+                            <th>Asing</th>
+                            <th>Manager info</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row">
+                                <p th:text="${managerDTOs[0].orderNumber}"></p>
+                            </th>
+                            <td>
+                                <p th:text="${#dates.format(#calendars.createForTimeZone(#calendars.year(managerDTOs[0].orderDay), #calendars.month(managerDTOs[0].orderDay), #calendars.day(managerDTOs[0].orderDay), #calendars.hour(managerDTOs[0].orderDay), #calendars.minute(managerDTOs[0].orderDay),'UK'), 'yyyy-MMM-dd HH:mm')}"></p>
+
+                            </td>
+                            <td>
+                                Name:Ottewo moewtto
+                                Phone:3232323333
+                                Email:aseeefg@mail.com
+                            </td>
+                            <td>
+                                From: orrlolo street 90002
+                                To: fokrrrok avenue 90003
+                                Distance: 35 miles
+                            </td>
+                            <td>
+                                truck:1
+                                movers:2
+                                rate per 1 hour: $125
+                            </td>
+                            <td style="width: 25%">
+                                <div>
+                                    <div class="input-group">
+                                        <span class="input-group-addon">Truck</span>
+                                        <div class="dropdown">
+                                            <select style="width: 50%;" class="form-control" id="truck"
+                                                    th:field="*{truck}">
+                                                <option th:each="truck : ${actualListTruck}"
+                                                        th:value="${truck}"
+                                                        th:text="#{${truck}}">Wireframe
+                                                </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <p>
+                                    <div class="input-group">
+                                        <span class="input-group-addon" id="basic-addon15994223">Forman</span>
+                                        <div class="dropdown">
+                                            <select style="width: 50%;" class="form-control" id="movers"
+                                                    th:field="*{movers}">
+                                                <option th:each="movers : ${actualListMovers}"
+                                                        th:value="${movers}"
+                                                        th:text="#{${movers}}">Wireframe
+                                                </option>
+                                            </select>
+                                            <button type="button" class="btn btn-sm btn-pill btn-primary">sms</button>
+                                        </div>
+                                    </div>
+
+                                    </p>
+
+                                    <p>
+                                    <div class="input-group">
+                                        <span class="input-group-addon" id="basic-addon15994223">Driver</span>
+                                        <div class="dropdown">
+                                            <select style="width: 50%;" class="form-control" id="movers"
+                                                    th:field="*{movers}">
+                                                <option th:each="movers : ${actualListMovers}"
+                                                        th:value="${movers}"
+                                                        th:text="#{${movers}}">Wireframe
+                                                </option>
+                                            </select>
+                                            <button type="button" class="btn btn-sm btn-pill btn-primary">sms</button>
+                                        </div>
+                                    </div>
+                                    </p>
+
+
+                                    <div class="input-group">
+                                        <span class="input-group-addon" id="basic-addon15994223">Mover</span>
+                                        <div class="dropdown">
+                                            <select style="width: 50%;" class="form-control" id="movers"
+                                                    th:field="*{movers}">
+                                                <option th:each="movers : ${actualListMovers}"
+                                                        th:value="${movers}"
+                                                        th:text="#{${movers}}">Wireframe
+                                                </option>
+                                            </select>
+                                            <button type="button" class="btn btn-sm btn-pill btn-primary">sms</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="form-group">
+                                    <label for="comment">Comment for manager:</label>
+                                    <textarea class="form-control" rows="5" id="comment"></textarea>
+                                </div>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-pill btn-primary">Print</button>
+                                <button type="button" class="btn btn-sm btn-pill btn-primary">Submit</button>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                2
+                            </th>
+                            <td>
+                                7/19/2016 PM: 12:00
+                            </td>
+                            <td>
+                                Name:Ottewo moewtto
+                                Phone:3232323333
+                                Email:aseeefg@mail.com
+                            </td>
+                            <td>
+                                From: orrlolo street 90002
+                                To: fokrrrok avenue 90003
+                                Distance: 35 miles
+                            </td>
+                            <td>
+                                truck:1
+                                movers:2
+                                rate per 1 hour: $125
+                            </td>
+                            <td style="width: 25%">
+                                <div>
+                                    <div class="input-group">
+                                        <span class="input-group-addon">Truck</span>
+                                        <div class="dropdown">
+                                            <select style="width: 50%;" class="form-control" id="truck"
+                                                    th:field="*{truck}">
+                                                <option th:each="truck : ${actualListTruck}"
+                                                        th:value="${truck}"
+                                                        th:text="#{${truck}}">Wireframe
+                                                </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <p>
+                                    <div class="input-group">
+                                        <span class="input-group-addon" id="basic-addon15994223">Forman</span>
+                                        <div class="dropdown">
+                                            <select style="width: 50%;" class="form-control" id="movers"
+                                                    th:field="*{movers}">
+                                                <option th:each="movers : ${actualListMovers}"
+                                                        th:value="${movers}"
+                                                        th:text="#{${movers}}">Wireframe
+                                                </option>
+                                            </select>
+                                            <button type="button" class="btn btn-sm btn-pill btn-primary">sms</button>
+                                        </div>
+                                    </div>
+
+                                    </p>
+
+                                    <p>
+                                    <div class="input-group">
+                                        <span class="input-group-addon" id="basic-addon15994223">Driver</span>
+                                        <div class="dropdown">
+                                            <select style="width: 50%;" class="form-control" id="movers"
+                                                    th:field="*{movers}">
+                                                <option th:each="movers : ${actualListMovers}"
+                                                        th:value="${movers}"
+                                                        th:text="#{${movers}}">Wireframe
+                                                </option>
+                                            </select>
+                                            <button type="button" class="btn btn-sm btn-pill btn-primary">sms</button>
+                                        </div>
+                                    </div>
+                                    </p>
+
+
+                                    <div class="input-group">
+                                        <span class="input-group-addon" id="basic-addon15994223">Mover</span>
+                                        <div class="dropdown">
+                                            <select style="width: 50%;" class="form-control" id="movers"
+                                                    th:field="*{movers}">
+                                                <option th:each="movers : ${actualListMovers}"
+                                                        th:value="${movers}"
+                                                        th:text="#{${movers}}">Wireframe
+                                                </option>
+                                            </select>
+                                            <button type="button" class="btn btn-sm btn-pill btn-primary">sms</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="form-group">
+                                    <label for="comment">Comment for manager:</label>
+                                    <textarea class="form-control" rows="5" id="comment"></textarea>
+                                </div>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-pill btn-primary">Print</button>
+                                <button type="button" class="btn btn-sm btn-pill btn-primary">Submit</button>
+                            </td>
+
+                        </tr>
+                        <!--<tr>-->
+                        <!--<th scope="row">2</th>-->
+                        <!--<td>Jacob</td>-->
+                        <!--<td>Thornton</td>-->
+                        <!--<td>@fat</td>-->
+                        <!--</tr>-->
+
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+        integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+        crossorigin="anonymous"></script>
+<script type="text/javascript" src="js\jfcore.js"></script>
+<!--<script type="text/javascript" src="js\order.js"></script>-->
+
+</body>
+</html>
