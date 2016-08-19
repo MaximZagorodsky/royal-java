@@ -4,6 +4,7 @@ import com.google.maps.DistanceMatrixApi;
 import com.google.maps.GeoApiContext;
 import com.google.maps.model.DistanceMatrix;
 import com.google.maps.model.TravelMode;
+import com.google.maps.model.Unit;
 import com.transport.model.Address;
 import com.transport.model.GoogleDistance;
 import com.transport.service.GoogleMapService;
@@ -40,7 +41,7 @@ public class GoogleMapServiceImpl implements GoogleMapService {
             matrix = DistanceMatrixApi.newRequest(context)
                     .origins(origins)
                     .destinations(destinations)
-                    .mode(TravelMode.DRIVING).await();
+                    .mode(TravelMode.DRIVING).units(Unit.IMPERIAL).await();
         } catch (Exception e) {
             e.printStackTrace();
         }

@@ -42,7 +42,7 @@ public class Manager implements Serializable {
 //    private String tape; //enums
 //    private Integer ddt;
 //    private Integer  rateOrFlat;
-//    private Integer totalForFirstHours;
+//    private Integer priceForEachHour;
 //    private Double  addExtra;
 //    private Double  discount; //enums
 //    private Double  totalPricePerFirstHours;

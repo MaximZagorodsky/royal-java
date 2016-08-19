@@ -661,7 +661,7 @@
                                     <span class="input-group-addon">Total for first</span>
                                     <div class="dropdown">
                                         <select class="form-control" id="totalForFirstHours"
-                                                th:field="*{totalForFirstHours}">
+                                                th:field="*{priceForEachHour}">
                                             <option th:each="totalHours : ${actualListTotalForFirstHours}"
                                                     th:value="${totalHours}"
                                                     th:text="${totalHours}">Wireframe

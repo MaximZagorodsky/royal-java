@@ -1,5 +1,7 @@
 package com.transport.util.time;
 
+import com.transport.enums.StartOrEndPeriodOfTimeEnum;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -28,7 +30,7 @@ public class StringToLongConverter {
         return date.getTime();
     }
 
-    public static String getCurrentDateTOString(Long dateTo) {
+    public static String getDateToString(Long dateTo) {
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
         Date date = new Date(dateTo);
         String format = "";
@@ -40,7 +42,28 @@ public class StringToLongConverter {
         return format;
     }
 
-    public static String getCurrentDateTOString() {
+    /**
+     *
+     * @param dateTo date to format
+     * @return date in string in format 2016-08-22 09:22
+     */
+    public static String getDateAndTimeToString(Long dateTo) {
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd hh:mm");
+        Date date = new Date(dateTo);
+        String format = "";
+        try {
+            format = formatter.format(date);;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return format;
+    }
+
+    /**
+     *
+     * @return date in string in format 2016-08-22
+     */
+    public static String getDateToString() {
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
         Date date = new Date();
         String format = "";
@@ -86,16 +109,20 @@ public class StringToLongConverter {
         return returnValue;
     }
 
-    public static Long converTimeAndDateFromSelectors(String time, String date) {
+    public static Long converTimeAndDateFromSelectors(String time, String date, StartOrEndPeriodOfTimeEnum period) {
         String startTime = time.substring(0, 5);
+        System.out.println(startTime);
         String endTime = time.substring(6, 11);
+        System.out.println(endTime);
         String formatToParse = time.substring(12, 16).equals("a.m.") ? "Am" : "Pm";
         Long returnValue = 0L;
 
         SimpleDateFormat formatterDateAndTime = new SimpleDateFormat("yyyy-MM-dd hh:mm a");
         try {
+            String startOrEndPeriod = period.equals(StartOrEndPeriodOfTimeEnum.START) ? startTime : endTime;
             System.out.println(formatterDateAndTime.parse(date + " " + startTime + " " + formatToParse));
-            returnValue = formatterDateAndTime.parse(date + " " + startTime + " " + formatToParse).getTime();
+            returnValue = formatterDateAndTime.parse(date + " " + startOrEndPeriod + " " + formatToParse).getTime();
+
         } catch (ParseException e) {
             e.printStackTrace();
         }

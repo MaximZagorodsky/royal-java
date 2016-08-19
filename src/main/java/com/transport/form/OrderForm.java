@@ -3,8 +3,10 @@ package com.transport.form;
 
 import com.transport.model.Address;
 import com.transport.util.time.StringToLongConverter;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.io.Serializable;
+import java.sql.Timestamp;
 import java.util.Set;
 
 /**
@@ -21,6 +23,26 @@ public class OrderForm implements Serializable {
     private String sizeOfMove;
     private String storageSize;
 
+    private String moveDateTime;
+
+    public String getEstimateDateTime() {
+        return estimateDateTime;
+    }
+
+    public void setEstimateDateTime(String estimateDateTime) {
+        this.estimateDateTime = estimateDateTime;
+    }
+
+    public String getMoveDateTime() {
+        return moveDateTime;
+    }
+
+    public void setMoveDateTime(String moveDateTime) {
+        this.moveDateTime = moveDateTime;
+    }
+
+    private String estimateDateTime;
+
     public String getDistance() {
         return distance;
     }
@@ -30,20 +52,20 @@ public class OrderForm implements Serializable {
     }
 
     private String distance;
+        @DateTimeFormat(pattern="MM/dd/yyyy")
+    private Timestamp moveDate;
+        @DateTimeFormat(pattern="MM/dd/yyyy")
+    private Timestamp packingDate;
+        @DateTimeFormat(pattern="MM/dd/yyyy")
+    private Timestamp estimateDate;
     //    @DateTimeFormat(pattern="MM/dd/yyyy")
-    private Long moveDate;
-    //    @DateTimeFormat(pattern="MM/dd/yyyy")
-    private Long packingDate;
-    //    @DateTimeFormat(pattern="MM/dd/yyyy")
-    private Long estimateDate;
-    //    @DateTimeFormat(pattern="MM/dd/yyyy")
-    private Long storageDate;
+    private Timestamp storageDate;
     //    @DateTimeFormat(pattern="HH:mm")
-    private Long moveDateTime;
+//    private Timestamp moveDateTime;
     //    @DateTimeFormat(pattern="HH:mm")
-    private Long packingDateTime;
+//    private Timestamp packingDateTime;
     //    @DateTimeFormat(pattern="HH:mm")
-    private Long estimateDateTime;
+//    private Timestamp estimateDateTime;
 
     private boolean isLabor;
 
@@ -87,7 +109,7 @@ public class OrderForm implements Serializable {
                 ",\n estimateDate=" + estimateDate +
                 ",\n storageDate=" + storageDate +
                 ",\n moveDateTime=" + moveDateTime +
-                ",\n packingDateTime=" + packingDateTime +
+//                ",\n packingDateTime=" + packingDateTime +
                 ",\n estimateDateTime=" + estimateDateTime +
                 ",\n isLabor=" + isLabor +
                 ",\n loadingAddress='" + loadingAddress + '\'' +
@@ -98,28 +120,34 @@ public class OrderForm implements Serializable {
 
 
     public void setMoveDate(String moveDate) {
-        this.moveDate = StringToLongConverter.convertDate(moveDate);
+        if (moveDate != null) {
+            this.moveDate = new Timestamp(StringToLongConverter.convertDate(moveDate));
+        }
     }
 
     public void setPackingDate(String packingDate) {
-        this.packingDate = StringToLongConverter.convertDate(packingDate);
+        if (packingDate != null) {
+            this.packingDate = new Timestamp(StringToLongConverter.convertDate(packingDate));
+        }
     }
 
     public void setEstimateDate(String estimateDate) {
-        this.estimateDate = StringToLongConverter.convertDate(estimateDate);
+        if (estimateDate != null) {
+            this.estimateDate = new Timestamp(StringToLongConverter.convertDate(estimateDate));
+        }
     }
 
     public void setStorageDate(String storageDate) {
-        this.storageDate = StringToLongConverter.convertDate(storageDate);
+        this.storageDate = new Timestamp(StringToLongConverter.convertDate(storageDate));
     }
 
-    public void setMoveDateTime(String moveDateTime) {
-        this.moveDateTime = StringToLongConverter.converTimeFromSelectors(moveDateTime, "start");
-    }
-
-    public void setPackingDateTime(String packingDateTime) {
-        this.packingDateTime = StringToLongConverter.converTimeFromSelectors(packingDateTime, "start");
-    }
+//    public void setMoveDateTime(String moveDateTime) {
+//        this.moveDateTime = new Timestamp(StringToLongConverter.converTimeFromSelectors(moveDateTime, "start"));
+//    }
+//
+//    public void setPackingDateTime(String packingDateTime) {
+//        this.packingDateTime = new Timestamp(StringToLongConverter.converTimeFromSelectors(packingDateTime, "start"));
+//    }
 
     public String getCompany() {
         return company;
@@ -177,38 +205,38 @@ public class OrderForm implements Serializable {
         this.storageSize = storageSize;
     }
 
-    public Long getMoveDate() {
+    public Timestamp getMoveDate() {
         return moveDate;
     }
 
 
-    public Long getPackingDate() {
+    public Timestamp getPackingDate() {
         return packingDate;
     }
 
-    public Long getEstimateDate() {
+    public Timestamp getEstimateDate() {
         return estimateDate;
     }
 
 
-    public Long getStorageDate() {
+    public Timestamp getStorageDate() {
         return storageDate;
     }
 
 
-    public Long getMoveDateTime() {
-        return moveDateTime;
-    }
-
-
-    public Long getPackingDateTime() {
-        return packingDateTime;
-    }
-
-
-    public Long getEstimateDateTime() {
-        return estimateDateTime;
-    }
+//    public Timestamp getMoveDateTime() {
+//        return moveDateTime;
+//    }
+//
+//
+//    public Timestamp getPackingDateTime() {
+//        return packingDateTime;
+//    }
+//
+//
+//    public Timestamp getEstimateDateTime() {
+//        return estimateDateTime;
+//    }
 
 
     public boolean isLabor() {
@@ -227,7 +255,7 @@ public class OrderForm implements Serializable {
         this.tariff = tariff;
     }
 
-    public void setEstimateDateTime(String estimateDateTime) {
-        this.estimateDateTime = StringToLongConverter.converTimeFromSelectors(estimateDateTime, "start");
-    }
+//    public void setEstimateDateTime(String estimateDateTime) {
+//        this.estimateDateTime = new Timestamp(StringToLongConverter.converTimeFromSelectors(estimateDateTime, "start"));
+//    }
 }

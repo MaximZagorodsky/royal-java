@@ -2,11 +2,11 @@ package com.transport.util.category;
 
 import com.transport.ServiceApplication;
 import com.transport.converter.VehicleConverter;
-import com.transport.dto.VehicleDTO;
 import com.transport.enums.Company;
+import com.transport.enums.ParserPatterEnum;
+import com.transport.enums.StartOrEndPeriodOfTimeEnum;
 import com.transport.model.Address;
 import com.transport.model.GoogleDistance;
-import com.transport.model.Vehicle;
 import com.transport.service.GoogleMapService;
 import com.transport.service.VehicleService;
 import com.transport.util.time.StringToLongConverter;
@@ -27,6 +27,7 @@ import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 /**
  * Created by Proxima on 26.07.2016.
@@ -76,24 +77,28 @@ public class CompatyTest {
 
     @Test
     public void timeConverter() {
-        DateTime date = new DateTime(
-                converTimeAndDateFromSelectors("08:30-09:30 a.m.", "2016-08-06"));
+        DateTime dateStart = new DateTime(
+                converTimeAndDateFromSelectors("08:30-09:30 a.m.", "2016-08-06", StartOrEndPeriodOfTimeEnum.START));
 
-        log.info("TimeAfterConvert:" + date);
-        log.info("Hour:" + date.getHourOfDay());
-        log.info("Minutes:" + date.getMinuteOfHour());
-        log.info("TimeAfterConvert:" + date.getMillis());
-        log.info("TimeStamp:" + new Timestamp(date.getMillis()));
-
-
-        VehicleDTO vehicleDTO = vehicleConverter.convertVehicleToVehicleDTO(
-                new Vehicle(16, "truck", "SA2231SA", true, "AM",
-                        new Timestamp(date.getMillis())), date.getMillis());
-        log.info("VehicalDTO" + vehicleDTO);
+        DateTime dateENd = new DateTime(
+                converTimeAndDateFromSelectors("08:30-09:30 a.m.", "2016-08-06", StartOrEndPeriodOfTimeEnum.END));
+        log.info("TimeAfterConvertSTART:" + dateStart);
+        log.info("TimeAfterConvertEND:" + dateENd);
+        log.info("Hour:" + dateStart.getHourOfDay());
+        log.info("Minutes:" + dateStart.getMinuteOfHour());
+        log.info("TimeAfterConvert:" + dateStart.getMillis());
+        log.info("TimeStamp:" + new Timestamp(dateStart.getMillis()));
+        log.info("TimeStamp:" + new Timestamp(dateENd.getMillis()));
 
 
-        System.out.println(CategoryUtil.getRoyalMovingPriceCategoryByDay(date));
-        System.out.println(StringToLongConverter.getCurrentDateTOString(1470240671276L));
+//        VehicleDTO vehicleDTO = vehicleConverter.convertVehicleToVehicleDTO(
+//                new Vehicle(16, "truck", "SA2231SA", true, "AM",
+//                        new Timestamp(dateStart.getMillis())), dateStart.getMillis());
+//        log.info("VehicalDTO" + vehicleDTO);
+
+
+        System.out.println(CategoryUtil.getRoyalMovingPriceCategoryByDay(dateStart));
+        System.out.println(StringToLongConverter.getDateToString(1470240671276L));
     }
 
     @Test
@@ -103,7 +108,7 @@ public class CompatyTest {
 
     @Test
     public void testDateToString() {
-        System.out.println(StringToLongConverter.getCurrentDateTOString());
+        System.out.println(StringToLongConverter.getDateToString());
     }
 
 
@@ -122,13 +127,30 @@ public class CompatyTest {
                 );
 
         System.out.println(distance);
+
     }
 
 
+    @Test
+    public void checkBigDecimal() {
+
+
+//        DateTime dateTime = new DateTime(aLong);
+//        System.out.println(dateTime.getDayOfWeek());
+
+    }
+
 
     @Test
-    public void checkTime() {
-        System.out.println(new DateTime());
+    public void checkTime() throws ParseException {
+//        ZonedDateTime departure
+        SimpleDateFormat parserSDF = new SimpleDateFormat("EEE MMM dd HH:mm:ss Z yyyy", Locale.ENGLISH);
+        Date date = parserSDF.parse("Wed Oct 16 00:00:00 CEST 2013");
+        SimpleDateFormat formatterDateAndTime = new SimpleDateFormat(ParserPatterEnum.EEE_MMM_dd_HH_mm_ss_Z_yyyy.getParsFormat(), Locale.ENGLISH);
+        System.out.println("First Date" + StringToLongConverter.
+                getDateAndTimeToString(formatterDateAndTime.parse("Fri Aug 19 02:13:52 EEST 2016").getTime()));
+        System.out.println(formatterDateAndTime.parse("Fri Aug 19 02:13:52 EEST 2016").getTime());
+        System.out.println("date: " + date.toString());
     }
 
     /**
@@ -138,6 +160,7 @@ public class CompatyTest {
      */
     public static Long converTimeFromSelectors(String time) {
         time = "03:00-04:00 p.m.";
+        time = "09:00-10:00 a.m";
         String startTime = time.substring(0, 5);
         System.out.println(startTime);
         String endTime = time.substring(6, 11);
@@ -156,7 +179,7 @@ public class CompatyTest {
         return returnValue;
     }
 
-    public static Long converTimeAndDateFromSelectors(String time, String date) {
+    public static Long converTimeAndDateFromSelectors(String time, String date, StartOrEndPeriodOfTimeEnum period) {
         String startTime = time.substring(0, 5);
         System.out.println(startTime);
         String endTime = time.substring(6, 11);
@@ -166,8 +189,10 @@ public class CompatyTest {
 
         SimpleDateFormat formatterDateAndTime = new SimpleDateFormat("yyyy-MM-dd hh:mm a");
         try {
+            String startOrEndPeriod = period.equals(StartOrEndPeriodOfTimeEnum.START) ? startTime : endTime;
             System.out.println(formatterDateAndTime.parse(date + " " + startTime + " " + formatToParse));
-            returnValue = formatterDateAndTime.parse(date + " " + startTime + " " + formatToParse).getTime();
+            returnValue = formatterDateAndTime.parse(date + " " + startOrEndPeriod + " " + formatToParse).getTime();
+
         } catch (ParseException e) {
             e.printStackTrace();
         }

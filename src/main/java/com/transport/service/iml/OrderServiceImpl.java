@@ -1,6 +1,7 @@
 package com.transport.service.iml;
 
 
+import com.transport.email.SmtpMailSender;
 import com.transport.enums.StatusEnum;
 import com.transport.form.OrderForm;
 import com.transport.form.PaymentDetailsForm;
@@ -22,7 +23,12 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.mail.MessagingException;
 import javax.transaction.Transactional;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+import java.sql.Timestamp;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -43,6 +49,9 @@ public class OrderServiceImpl implements OrderService {
     private ClientRepository clientRepository;
 
     @Autowired
+    SmtpMailSender mailSender;
+
+    @Autowired
     EventRepository eventRepository;
 
     @Override
@@ -59,27 +68,28 @@ public class OrderServiceImpl implements OrderService {
             log.info("-->>> new Client: " + newClient);
         }
 
-
         Order order = new Order();
 
-        order.setDiscount(detailsForm.getDiscount());
+        order.setDiscount(new BigDecimal(detailsForm.getDiscount()));
         //complete sets
 
         order.setCompany(orderForm.getCompany());
         order.setAdvertisement(orderForm.getAdvertisement());
         order.setSizeOfMove(orderForm.getSizeOfMove());
         order.setLabor(orderForm.isLabor());
-        order.setPhoneNumber(order.getPhoneNumber());
         order.setDiscount(order.getDiscount());
 
         methods(orderForm, order);
-        order.setOrderDay(System.currentTimeMillis());
+        order.setOrderDay(new Timestamp(new Date().getTime()));
         order.setClient(client);
         //<editor-fold desc="hide">
         order.setEstimateDate(orderForm.getEstimateDate());
         order.setPackageDate(orderForm.getPackingDate());
-        order.setPickUpDate(orderForm.getMoveDate());
+        order.setMoveDate(orderForm.getMoveDate());
         order.setDistance(orderForm.getDistance());
+
+        order.setEstimateDateTime(orderForm.getEstimateDateTime());
+        order.setMoveDateTime(orderForm.getMoveDateTime());
 
         //order.setStored(orderForm.isStored());
         // order.setDurationStorage(orderForm.getDurationStorage());
@@ -97,11 +107,12 @@ public class OrderServiceImpl implements OrderService {
         order.setShrink(detailsForm.getShrink());
         order.setTape(detailsForm.getTape());
         order.setStatus(detailsForm.getStatus());
+        order.setTotalPrice(detailsForm.getTotalPrice());
+//        order.setNumberOfHours(detailsForm.getTotalHour());
 
         order.setDdt(detailsForm.getDdt());
-
-
-        order.setTotalPricePerFirstHours(detailsForm.getRatePerHour());
+        order.setPriceForEachHour(detailsForm.getRatePerHour());
+        order.setCreatedTime(new Timestamp(System.currentTimeMillis()));
 
 
         order.setFieldForManagerComments(detailsForm.getFieldForManagerComments());
@@ -109,15 +120,22 @@ public class OrderServiceImpl implements OrderService {
         //</editor-fold>
 
         long orderDay = System.currentTimeMillis();
-        order.setOrderDay(orderDay);
-        Order save = orderRepository.save(order);
+//        order.setOrderDay(orderDay);
+        orderRepository.save(order);
+
+        Order byCreatedTime = orderRepository.findByCreatedTime(order.getCreatedTime());
         createEvent(
-                save,
-                orderRepository.findByOrderDay(orderDay).getId()
+                byCreatedTime,
+                byCreatedTime.getId()
         );
 
-
-        return save;
+        try {
+            System.out.println("ORDER DISCOUNT FROM ADD Order:" + byCreatedTime.getDiscount().setScale(2, RoundingMode.CEILING));
+            mailSender.sent(byCreatedTime);
+        } catch (MessagingException e) {
+            e.printStackTrace();
+        }
+        return byCreatedTime;
 
     }
 
@@ -134,12 +152,10 @@ public class OrderServiceImpl implements OrderService {
     public Order addOrder(OrderForm orderForm) {
         Address addressFrom = new Address();
 
-//        addressFrom.setAddress(orderForm.getLoadingAddress());
-        // addressFrom.setFloor(orderForm.getFloor());
+
         addressFrom = addressRepository.save(addressFrom);
         Address addressTo = new Address();
-//        addressTo.setAddress(orderForm.getLoadingAddress());
-        //addressTo.setFloor(orderForm.getFloor());
+
         addressTo = addressRepository.save(addressTo);
 
         Set<Address> loadingAddress = new HashSet<>();
@@ -164,7 +180,6 @@ public class OrderServiceImpl implements OrderService {
         //complete sets
 
         order.setCompany(orderForm.getCompany());
-        order.setFullName(orderForm.getFullName());
         order.setAdvertisement(orderForm.getAdvertisement());
 
         order.setSizeOfMove(orderForm.getSizeOfMove());
@@ -176,19 +191,17 @@ public class OrderServiceImpl implements OrderService {
         order.setPackageDate(orderForm.getPackingDate());
         order.setMoveDate(orderForm.getMoveDate());
         order.setEstimateDate(orderForm.getEstimateDate());
-        order.setMail(orderForm.getMail());
-        order.setPhoneNumber(orderForm.getPhoneNumber());
 
 
         long orderDay = System.currentTimeMillis();
-        order.setOrderDay(orderDay);
+        order.setOrderDay(new Timestamp(orderDay));
         order.setClient(client);
 
 
         Order save = orderRepository.save(order);
         createEvent(
                 save,
-                orderRepository.findByOrderDay(orderDay).getId()
+                save.getId()
         );
 
         return save;
@@ -228,12 +241,23 @@ public class OrderServiceImpl implements OrderService {
     }
 
 
-    private void createEvent(Order order, int orderId) {
+    private void createEvent(Order order, int orderId) {//Follow up - напоминание
         Event event = new Event();
-        event.setStart(order.getPackageDate());
+        event.setOrderStatus(order.getStatus());
+
+        if (order.getMoveDate() != null) {
+            event.setStart(order.getMoveDate());
+        } else if (order.getEstimateDate() != null) {
+            event.setStart(order.getEstimateDate());
+        } else if (order.getPackageDate() != null) {
+            event.setStart(order.getPackageDate());
+        } else if (order.getFollowUpDate() != null) {
+            event.setStart(order.getFollowUpDate());
+        }
+
         event.setTitle(order.getClient().getFullName());
         event.setOrderId(orderId);
-        event.setOrderStatus(order.getStatus());
+
         System.out.println("EVENT_STATUS:" + event.getOrderStatus());
         eventRepository.save(event);
     }

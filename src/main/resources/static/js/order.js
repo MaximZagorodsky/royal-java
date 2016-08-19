@@ -16,7 +16,7 @@ $(document).ready(
         //window.onbeforeunload = confirmExit;
         $("#moveDate").change(showModel);
         $("#storageDate").change(showModel);
-        $("#totalForFirstHours").change(changeTotalSumPerHours);
+        $("#priceForEachHour").change(changeTotalSumPerHours);
         $("#apply").click(refreshPaymentDetails);
         addressButtonListen();
         changePackingMaterials();

@@ -47,42 +47,44 @@ public class ManagerServiceImpl implements ManagerService {
         List<Order> orders = orderRepository.findByOrderDayBetween(
                 TimeUtil.getStartOfTheDay(date), TimeUtil.getEndOfTheDay(date));
         List<ManagerDTO> managerDTOs = new ArrayList<>();
-        for (Order order : orders) {
-            ManagerDTO managerDTO = new ManagerDTO();
-            managerDTO.setOrderNumber(order.getOrderNumber());
-            managerDTO.setDate(StringToLongConverter.getCurrentDateTOString(order.getOrderDay()));
-            System.out.println("managerDTO.getDate()" + StringToLongConverter.getCurrentDateTOString(order.getOrderDay()));
-            System.out.println("managerDTO.getDate()" + managerDTO.getDate());
-            managerDTO.setOrderDay(order.getOrderDay());
-            managerDTO.setFullName(order.getFullName());
-            managerDTO.setPhoneNumber(order.getPhoneNumber());
-            managerDTO.setMail(order.getMail());
-            managerDTO.setFieldForManagerComments(order.getFieldForManagerComments());
-            List<Address> loadingAddresses = new ArrayList<>(order.getLoadingAddress());
-            managerDTO.setLoadingAddress(loadingAddresses);
-
-            List<Address> unloadingAddresses = new ArrayList<>(order.getLoadingAddress());
-
-            managerDTO.setUnloadingAddress(unloadingAddresses);
-            managerDTOs.add(managerDTO);
-        }
+//        for (Order order : orders) {
+//            ManagerDTO managerDTO = new ManagerDTO();
+//            managerDTO.setOrderNumber(order.getOrderNumber());
+//            managerDTO.setDate(StringToLongConverter.getDateToString(order.getOrderDay().getTime()));
+//            System.out.println("managerDTO.getDate()" + StringToLongConverter.getDateToString(order.getOrderDay().getTime()));
+//            System.out.println("managerDTO.getDate()" + managerDTO.getDate());
+//            managerDTO.setOrderDay(managerDTO.getDate() + " " + order.getMoveDateTime());
+//            managerDTO.setFullName(order.getClient().getFullName());
+//            managerDTO.setPhoneNumber(order.getClient().getPhone());
+//            managerDTO.setMail(order.getClient().getMail());
+//            managerDTO.setFieldForManagerComments(order.getFieldForManagerComments());
+//            List<Address> loadingAddresses = new ArrayList<>(order.getLoadingAddress());
+//            managerDTO.setLoadingAddress(loadingAddresses);
+//
+//            List<Address> unloadingAddresses = new ArrayList<>(order.getLoadingAddress());
+//
+//            managerDTO.setUnloadingAddress(unloadingAddresses);
+//            managerDTOs.add(managerDTO);
+//
+//            System.out.println("Sent:" + managerDTO);
+//        }
         return managerDTOs;
     }
 
     @Override
     public List<ManagerDTO> getManagerDTOById(Integer id) {
-        if (count==0){
+        if (count == 0) {
         }
         Order order = orderRepository.findOne(id);
         System.out.println("Order from getManagerDTOById " + order);
         ManagerDTO managerDTO = new ManagerDTO();
 //        managerDTO.setOrderNumber(order.getOrderNumber());
         managerDTO.setOrderNumber(order.getId());
-        managerDTO.setOrderDay(order.getOrderDay());
+        managerDTO.setOrderDay(StringToLongConverter.getDateToString(order.getOrderDay().getTime()) + " " + order.getMoveDateTime());
         managerDTO.setMovers(order.getMovers());
         managerDTO.setTruck(order.getTruck());
-        managerDTO.setDate(StringToLongConverter.getCurrentDateTOString(order.getOrderDay()));
-        System.out.println("managerDTO.getDate()" + StringToLongConverter.getCurrentDateTOString(order.getOrderDay()));
+        managerDTO.setDate(StringToLongConverter.getDateToString(order.getOrderDay().getTime()));
+        System.out.println("managerDTO.getDate()" + StringToLongConverter.getDateToString(order.getOrderDay().getTime()));
         System.out.println("managerDTO.getDate()" + managerDTO.getDate());
 
         Client client = order.getClient();
@@ -91,8 +93,9 @@ public class ManagerServiceImpl implements ManagerService {
         managerDTO.setFullName(client.getFullName());
         managerDTO.setPhoneNumber(client.getPhone());
         managerDTO.setMail(client.getMail());
-        managerDTO.setTotalPriceForFirstHour(order.getTotalPricePerFirstHours());
+        managerDTO.setTotalPrice(order.getTotalPricePerFirstHours());
         managerDTO.setDistance(order.getDistance());
+        managerDTO.setTotalPrice(order.getTotalPrice().intValue());
 
         //TODO Сделать отдеальные сущности для пацанов ниже, чисто для отправки на фронт-енд
         managerDTO.setDrivers(driverRepository.findByEnabledTrue());

@@ -19,11 +19,11 @@ public class ManagerDTO {
     private String sizeOfMove; //enums
     private String storageSize;
     private boolean isLabor;
-    private Integer totalPriceForFirstHour;
+    private Integer totalPrice;
     private String distance;
     private Integer truck; //enums
     private Integer movers; //enums
-    private Long orderDay;
+    private String orderDay;
     private String heavyItem; //enums
     private String fieldForManagerComments;
     private List<Address> loadingAddress;

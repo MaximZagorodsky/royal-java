@@ -12,6 +12,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Created by Proxima on 29.07.2016.
@@ -19,6 +20,10 @@ import java.util.List;
 @Service
 public class CalendarEventServiceImpl implements CalendarEventService {
 
+    public static final String BOOKED = "Booked";
+    public static final String COMPLETED = "Completed";
+    public static final String IN_PROGRESS = "In progress";
+    public static final String SOLD = "Sold";
     @Autowired
     EventRepository eventRepository;
 
@@ -33,6 +38,25 @@ public class CalendarEventServiceImpl implements CalendarEventService {
     }
 
     @Override
+    public List<CalendarEntity> getEventsByOrderCountStatus(final String booked, String completed, String inProgress, String sold) {
+        List<CalendarEntity> events = getEvents();
+        List<CalendarEntity> eventsByOrderStatus = new ArrayList<>();
+
+        for (CalendarEntity calEntity : events) {
+            if (Objects.equals(calEntity.getOrderStatus(), booked)) {
+                eventsByOrderStatus.add(calEntity);
+            } else if (Objects.equals(calEntity.getOrderStatus(), completed)) {
+                eventsByOrderStatus.add(calEntity);
+            } else if (Objects.equals(calEntity.getOrderStatus(), sold)) {
+                eventsByOrderStatus.add(calEntity);
+            } else if (Objects.equals(calEntity.getOrderStatus(), inProgress)) {
+                eventsByOrderStatus.add(calEntity);
+            }
+        }
+        return eventsByOrderStatus;
+    }
+
+    @Override
     public CountByStatus createResponse(List<CalendarEntity> events) {
         int completed = 0;
         int booked = 0;
@@ -44,16 +68,16 @@ public class CalendarEventServiceImpl implements CalendarEventService {
         for (CalendarEntity ev : events) {
             System.out.println(ev.getOrderStatus());
             switch (ev.getOrderStatus()) {
-                case "booked":
+                case BOOKED:
                     booked++;
                     break;
-                case "completed":
+                case COMPLETED:
                     completed++;
                     break;
-                case "in progress":
+                case IN_PROGRESS:
                     inProgress++;
                     break;
-                case "sold":
+                case SOLD:
                     sold++;
                     break;
             }
@@ -74,10 +98,10 @@ public class CalendarEventServiceImpl implements CalendarEventService {
                 CalendarEntity calendarEntity = new CalendarEntity();
                 calendarEntity.setOrderId(item.getOrderId());
                 calendarEntity.setTitle(item.getTitle());
-                calendarEntity.setStart(converLongToString(item.getStart()));
+                calendarEntity.setStart(converLongToString(item.getStart().getTime()));
                 calendarEntity.setOrderStatus(item.getOrderStatus());
                 if (item.getEnd() != null) {
-                    calendarEntity.setEnd(converLongToString(item.getEnd()));
+                    calendarEntity.setEnd(converLongToString(item.getEnd().getTime()));
                 }
                 calendarEntityList.add(calendarEntity);
             }

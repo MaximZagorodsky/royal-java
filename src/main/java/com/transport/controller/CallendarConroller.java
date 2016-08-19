@@ -10,6 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
@@ -34,7 +35,35 @@ public class CallendarConroller {
         List<CalendarEntity> events = calendarEventService.getEvents();
         calendarResponse.setCalendarEntity(events);
         calendarResponse.setCountByStatus(calendarEventService.createResponse(events));
-        calendarResponse.setCurrentDate(StringToLongConverter.getCurrentDateTOString());
+        calendarResponse.setCurrentDate(StringToLongConverter.getDateToString());
+        return new ResponseEntity(calendarResponse, HttpStatus.OK);
+    }
+
+    /**
+     *
+     * @param booked - orderStatus
+     * @param completed - orderStatus
+     * @param sold - orderStatus
+     * @param inProgress - orderStatus
+     * @return events filtered by orderStatus
+     */
+    @RequestMapping(
+            value = {"/eventss{booked,completed,inProgress,sold}"},
+            method = {RequestMethod.GET},
+            produces = {"application/json"}
+    )
+    public ResponseEntity<CalendarResponse> getCalendarDataByStatus(
+            @RequestParam String booked,
+            @RequestParam String completed,
+            @RequestParam String sold,
+            @RequestParam String inProgress
+    ) {
+        CalendarResponse calendarResponse = new CalendarResponse();
+        List<CalendarEntity> events = calendarEventService.
+                getEventsByOrderCountStatus(booked, completed, inProgress, sold);
+        calendarResponse.setCalendarEntity(events);
+        calendarResponse.setCountByStatus(calendarEventService.createResponse(events));
+        calendarResponse.setCurrentDate(StringToLongConverter.getDateToString());
         return new ResponseEntity(calendarResponse, HttpStatus.OK);
     }
 
@@ -46,7 +75,7 @@ public class CallendarConroller {
     )
     public ResponseEntity<List<CalendarEntity>> getCurrentDate() {
         CalendarResponse calendarResponse = new CalendarResponse();
-        calendarResponse.setCurrentDate(StringToLongConverter.getCurrentDateTOString());
+        calendarResponse.setCurrentDate(StringToLongConverter.getDateToString());
         return new ResponseEntity(calendarResponse, HttpStatus.OK);
     }
 }

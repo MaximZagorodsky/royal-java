@@ -4,7 +4,6 @@ import com.transport.ServiceApplication;
 import com.transport.model.Client;
 import com.transport.model.Order;
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,12 +29,12 @@ public class SimpleOrderManagerTest {
     public void initOrder() {
         Client client = new Client();
         client.setMail("textmesweet@gmail.com");
-        client.setFullName("Mr Brooks");
+        client.setFullName("<div dir=\"ltr\"><div><div>name: fullname<br></div>phone: 312321<br></div>mail: <a href=\"mailto:grinader@gmail.com\">grinader@gmail.com</a><br></div>");
         order = new Order();
         order.setOrderNumber(777);
         order.setClient(client);
     }
-    @Ignore
+//    @Ignore
     @Test
     public void sendMail() throws MessagingException {
         smtpMailSender.sent(order);

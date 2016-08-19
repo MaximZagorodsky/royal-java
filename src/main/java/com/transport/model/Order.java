@@ -1,10 +1,11 @@
 package com.transport.model;
 
 import lombok.Data;
-import org.hibernate.validator.constraints.Email;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.math.BigDecimal;
+import java.sql.Timestamp;
 import java.util.Set;
 
 /**
@@ -21,40 +22,46 @@ public class Order implements Serializable {
     @GeneratedValue
     private Integer orderNumber;
     private String company; //enums
-    private String fullName;
-    private String phoneNumber;
-    @Email
-    private String mail;
+
 
     private String advertisement;
     private String sizeOfMove; //enums
     private String storageSize;
     private boolean isLabor;
 
-    private String  status; //enums
+    private String status; //enums
     private Integer truck; //enums
     private Integer movers; //enums
-    private Long orderDay;
+    private Timestamp orderDay;
     private String heavyItemPrice; //enums
     private String serviceCharge;//enums
     private Integer shrink; //enums
     private Integer tape; //enums
     private Integer ddt;
     private Integer rateOrFlat;
-    private Integer totalForFirstHours;
-    private Double addExtra;
-    private Double discount; //enums
+    private BigDecimal priceForEachHour;
     private Integer totalPricePerFirstHours;
+    private BigDecimal addExtra;
+    private BigDecimal discount; //enums
     private String fieldForSalesmanComments;
     private String fieldForManagerComments;
-    private Long followUpDate;
+    private Timestamp followUpDate;
     private String distance;
 
+    private String moveDateTime;
+    private String estimateDateTime;
+//    private String p
 
-    private Double workTime;        // salaryCount
+    private Timestamp createdTime;
+    private BigDecimal totalPrice;
+    private Integer ddtPrice;
+    private Integer totalHour;
+
+
+    private BigDecimal workTime;        // salaryCount
     private Integer paymentMethod; // SalaryCount
     @Column(name = "end_pick_date") // salaryConut
-    private Long endPickUpDate; // salaryConut
+    private Timestamp endPickUpDate; // salaryConut
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "client_id")
@@ -74,368 +81,30 @@ public class Order implements Serializable {
     //Date for observing and planning of movement by supervisor
 
     @Column(name = "estimate_date")
-    private Long estimateDate;
+    private Timestamp estimateDate;
 
     @Column(name = "package_date")
-    private Long packageDate;
+    private Timestamp packageDate;
 
 
     @Column(name = "start_pickUp_date")
 
-    private Long pickUpDate;
+    private Timestamp pickUpDate;
 
     @Column(name = "move_date")
-    private Long moveDate;
+    private Timestamp moveDate;
 
     @Column(name = "storage_date")
-    private Long storageDate;
+    private Timestamp storageDate;
 
     @Column(name = "is_stored")
     private boolean isStored;
 
-    private Long durationStorage;
+    private Timestamp durationStorage;
 
     @Column(name = "box_quantity")
     private Integer boxQuantity;
 
-
-   /* public Integer getId() {
-        return id;
-    }
-
-public void setEstimateDate(String date) {
-        this.estimateDate = StringToLongConverter.convertDate(date);
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public Integer getOrderNumber() {
-        return orderNumber;
-    }
-
-    public void setOrderNumber(Integer orderNumber) {
-        this.orderNumber = orderNumber;
-    }
-
-    public String getCompany() {
-        return company;
-    }
-
-    public void setCompany(String company) {
-        this.company = company;
-    }
-
-    public String getFullName() {
-        return fullName;
-    }
-
-    public void setFullName(String fullName) {
-        this.fullName = fullName;
-    }
-
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
-
-    public String getMail() {
-        return mail;
-    }
-
-    public void setMail(String mail) {
-        this.mail = mail;
-    }
-
-    public String getAdvertisement() {
-        return advertisement;
-    }
-
-    public void setAdvertisement(String advertisement) {
-        this.advertisement = advertisement;
-    }
-
-    public String getSizeOfMove() {
-        return sizeOfMove;
-    }
-
-    public void setSizeOfMove(String sizeOfMove) {
-        this.sizeOfMove = sizeOfMove;
-    }
-
-    public String getStorageSize() {
-        return storageSize;
-    }
-
-    public void setStorageSize(String storageSize) {
-        this.storageSize = storageSize;
-    }
-
-    public boolean isLabor() {
-        return isLabor;
-    }
-
-    public void setLabor(boolean labor) {
-        isLabor = labor;
-    }
-
-    public Integer getStatus() {
-        return status;
-    }
-
-    public void setStatus(Integer status) {
-        this.status = status;
-    }
-
-    public Integer getTruck() {
-        return truck;
-    }
-
-    public void setTruck(Integer truck) {
-        this.truck = truck;
-    }
-
-    public String getMovers() {
-        return movers;
-    }
-
-    public void setMovers(String movers) {
-        this.movers = movers;
-    }
-
-    public Long getOrderDay() {
-        return orderDay;
-    }
-
-    public void setOrderDay(Long orderDay) {
-        this.orderDay = orderDay;
-    }
-
-    public String getHeavyItemPrice() {
-        return heavyItemPrice;
-    }
-
-    public void setHeavyItemPrice(String heavyItemPrice) {
-        this.heavyItemPrice = heavyItemPrice;
-    }
-
-    public String getServiceCharge() {
-        return serviceCharge;
-    }
-
-    public void setServiceCharge(String serviceCharge) {
-        this.serviceCharge = serviceCharge;
-    }
-
-    public String getShrink() {
-        return shrink;
-    }
-
-    public void setShrink(String shrink) {
-        this.shrink = shrink;
-    }
-
-    public String getTape() {
-        return tape;
-    }
-
-    public void setTape(String tape) {
-        this.tape = tape;
-    }
-
-    public Integer getDdt() {
-        return ddt;
-    }
-
-    public void setDdt(Integer ddt) {
-        this.ddt = ddt;
-    }
-
-    public Integer getRateOrFlat() {
-        return rateOrFlat;
-    }
-
-    public void setRateOrFlat(Integer rateOrFlat) {
-        this.rateOrFlat = rateOrFlat;
-    }
-
-    public Integer getTotalForFirstHours() {
-        return totalForFirstHours;
-    }
-
-    public void setTotalForFirstHours(Integer totalForFirstHours) {
-        this.totalForFirstHours = totalForFirstHours;
-    }
-
-    public Double getAddExtra() {
-        return addExtra;
-    }
-
-    public void setAddExtra(Double addExtra) {
-        this.addExtra = addExtra;
-    }
-
-    public Double getDiscount() {
-        return discount;
-    }
-
-    public void setDiscount(Double discount) {
-        this.discount = discount;
-    }
-
-    public Double getTotalPricePerFirstHours() {
-        return totalPricePerFirstHours;
-    }
-
-    public void setTotalPricePerFirstHours(Double totalPricePerFirstHours) {
-        this.totalPricePerFirstHours = totalPricePerFirstHours;
-    }
-
-    public String getFieldForSalesmanComments() {
-        return fieldForSalesmanComments;
-    }
-
-    public void setFieldForSalesmanComments(String fieldForSalesmanComments) {
-        this.fieldForSalesmanComments = fieldForSalesmanComments;
-    }
-
-    public String getFieldForManagerComments() {
-        return fieldForManagerComments;
-    }
-
-    public void setFieldForManagerComments(String fieldForManagerComments) {
-        this.fieldForManagerComments = fieldForManagerComments;
-    }
-
-    public Long getFollowUpDate() {
-        return followUpDate;
-    }
-
-    public void setFollowUpDate(Long followUpDate) {
-        this.followUpDate = followUpDate;
-    }
-
-    public Double getWorkTime() {
-        return workTime;
-    }
-
-    public void setWorkTime(Double workTime) {
-        this.workTime = workTime;
-    }
-
-    public Integer getPaymentMethod() {
-        return paymentMethod;
-    }
-
-    public void setPaymentMethod(Integer paymentMethod) {
-        this.paymentMethod = paymentMethod;
-    }
-
-    public Long getEndPickUpDate() {
-        return endPickUpDate;
-    }
-
-    public void setEndPickUpDate(Long endPickUpDate) {
-        this.endPickUpDate = endPickUpDate;
-    }
-
-    public Client getClient() {
-        return client;
-    }
-
-    public void setClient(Client client) {
-        this.client = client;
-    }
-
-    public Set<Address> getUnloadingAddress() {
-        return unloadingAddress;
-    }
-
-    public void setUnloadingAddress(Set<Address> unloadingAddress) {
-        this.unloadingAddress = unloadingAddress;
-    }
-
-    public Set<Address> getLoadingAddress() {
-        return loadingAddress;
-    }
-
-    public void setLoadingAddress(Set<Address> loadingAddress) {
-        this.loadingAddress = loadingAddress;
-    }
-
-    public Long getBoxDeliveredDate() {
-        return boxDeliveredDate;
-    }
-
-    public void setBoxDeliveredDate(Long boxDeliveredDate) {
-        this.boxDeliveredDate = boxDeliveredDate;
-    }
-
-    public Long getEstimateDate() {
-        return estimateDate;
-    }
-
-
-    public Long getPackageDate() {
-        return packageDate;
-    }
-
-    public void setPackageDate(String packageDate) {
-        this.packageDate = StringToLongConverter.convertDate(packageDate);
-    }
-
-    public Long getPickUpDate() {
-        return pickUpDate;
-    }
-
-    public void setPickUpDate(Long pickUpDate) {
-        this.pickUpDate = pickUpDate;
-    }
-
-    public Long getMoveDate() {
-        return moveDate;
-    }
-
-    public void setMoveDate(String moveDate) {
-        this.moveDate = StringToLongConverter.convertDate(moveDate);
-    }
-
-    public Long getStorageDate() {
-        return storageDate;
-    }
-
-    public void setStorageDate(Long storageDate) {
-        this.storageDate = storageDate;
-    }
-
-    public boolean isStored() {
-        return isStored;
-    }
-
-    public void setStored(boolean stored) {
-        isStored = stored;
-    }
-
-    public Long getDurationStorage() {
-        return durationStorage;
-    }
-
-    public void setDurationStorage(Long durationStorage) {
-        this.durationStorage = durationStorage;
-    }
-
-    public Integer getBoxQuantity() {
-        return boxQuantity;
-    }
-
-    public void setBoxQuantity(Integer boxQuantity) {
-        this.boxQuantity = boxQuantity;
-    }
-*/
 
     @Override
     public String toString() {
@@ -443,9 +112,9 @@ public void setEstimateDate(String date) {
                 "id=" + id +
                 ",\n orderNumber=" + orderNumber +
                 ",\n company='" + company + '\'' +
-                ",\n fullName='" + fullName + '\'' +
-                ",\n phoneNumber='" + phoneNumber + '\'' +
-                ",\n mail='" + mail + '\'' +
+//                ",\n fullName='" + fullName + '\'' +
+//                ",\n phoneNumber='" + phoneNumber + '\'' +
+//                ",\n mail='" + mail + '\'' +
                 ",\n advertisement='" + advertisement + '\'' +
                 ",\n sizeOfMove='" + sizeOfMove + '\'' +
                 ",\n storageSize='" + storageSize + '\'' +
@@ -460,7 +129,7 @@ public void setEstimateDate(String date) {
                 ",\n tape='" + tape + '\'' +
                 ",\n ddt=" + ddt +
                 ",\n rateOrFlat=" + rateOrFlat +
-                ",\n totalForFirstHours=" + totalForFirstHours +
+                ",\n priceForEachHour=" + priceForEachHour +
                 ",\n addExtra=" + addExtra +
                 ",\n discount=" + discount +
                 ",\n totalPricePerFirstHours=" + totalPricePerFirstHours +
@@ -482,6 +151,9 @@ public void setEstimateDate(String date) {
                 ",\n isStored=" + isStored +
                 ",\n durationStorage=" + durationStorage +
                 ",\n boxQuantity=" + boxQuantity +
+                ",\n moveDateTime=" + moveDateTime+
+                ",\n estimateDateTime=" + estimateDateTime +
+                ",\n totalPrice=" + totalPrice +
                 '}';
     }
 }

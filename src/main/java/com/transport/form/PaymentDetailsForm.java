@@ -3,6 +3,7 @@ package com.transport.form;
 import lombok.Data;
 import org.springframework.format.annotation.DateTimeFormat;
 
+import java.math.BigDecimal;
 import java.util.Date;
 
 /**
@@ -33,7 +34,8 @@ public class PaymentDetailsForm {
 
     private String rateType;
     private String heavyItemPrice;
-    private Integer totalForFirstHours;
+    private Integer totalHour; //
+
     private String status;
     private String followUpDate;
     private String fieldForSalesmanComments;
@@ -43,12 +45,14 @@ public class PaymentDetailsForm {
     private String storageSize;
     private String tariff;
 
-    private Integer ratePerHour;
+    private BigDecimal ratePerHour;
     private Integer ddt;
     private Double tapeValue;
     private Double shrinkValue;
     private Double discount;
     private Double packingMaterialsValue;
+    private BigDecimal totalHourPrice;
+    private BigDecimal totalPrice;
 
     @Override
     public String toString() {
@@ -68,7 +72,8 @@ public class PaymentDetailsForm {
                 ", zipTo=" + zipTo +
                 ", rateType='" + rateType + '\'' +
                 ", heavyItemPrice='" + heavyItemPrice + '\'' +
-                ", totalForFirstHours='" + totalForFirstHours + '\'' +
+                ", totalHour='" + totalHour + '\'' +
+                ", totalPrice='" + totalPrice + '\'' +
                 ", status='" + status + '\'' +
                 ", followUpDate='" + followUpDate + '\'' +
                 ", fieldForSalesmanComments='" + fieldForSalesmanComments + '\'' +
@@ -82,6 +87,7 @@ public class PaymentDetailsForm {
                 ", tapeValue=" + tapeValue +
                 ", shrinkValue=" + shrinkValue +
                 ", discount=" + discount +
+                ", totalHourPrice=" + totalHourPrice +
                 ", packingMaterialsValue=" + packingMaterialsValue +
                 '}';
     }

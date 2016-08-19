@@ -15,5 +15,7 @@ public interface CalendarEventService {
 
     List<CalendarEntity> getEvents();
 
+    List<CalendarEntity> getEventsByOrderCountStatus(String booked, String completed, String inProgress, String sold);
+
     CountByStatus createResponse(List<CalendarEntity> event);
 }

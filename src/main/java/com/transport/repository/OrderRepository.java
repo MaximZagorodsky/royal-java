@@ -3,6 +3,7 @@ package com.transport.repository;
 import com.transport.model.Order;
 import org.springframework.data.jpa.repository.JpaRepository;
 
+import java.sql.Timestamp;
 import java.util.List;
 
 /**
@@ -11,7 +12,7 @@ import java.util.List;
 public interface OrderRepository extends JpaRepository<Order, Integer> {
     List<Order> findByOrderDayBetween(Long startDate, Long endDate);
 
-    Order findByOrderDay(Long date);
+    Order findByCreatedTime(Timestamp createdTime);
 
     Integer countByStatus(String status);
 

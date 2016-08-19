@@ -23,7 +23,7 @@ public class Vehicle {
     private boolean isAvaliable;
     private Timestamp bookingDate;
     private String periodOfDay;
-    @OneToMany(mappedBy = "vehicle", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "vehicle", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     Set<BookedTime> bookedTime;
 
     public Vehicle(String type, String regNumber, boolean isAvaliable, String periodOfDay) {

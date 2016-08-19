@@ -18,7 +18,7 @@ public class BookedTime {
     Integer id;
     Long startPeriod;
     Long finishPeriod;
-    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "vehicle")
     Vehicle vehicle;
 

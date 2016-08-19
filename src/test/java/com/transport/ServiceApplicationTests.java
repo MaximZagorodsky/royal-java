@@ -90,10 +90,6 @@ public class ServiceApplicationTests {
 
         Order order = new Order();
 
-        order.setMail("orderTest"+ Math.random()+"@mail.com");
-        order.setCompany("Royal");
-        order.setFullName("Alex under");
-        order.setPhoneNumber("3233233232");
 
         //order.setAdvertisement(1);
         //order.setSizeOfMove(3);

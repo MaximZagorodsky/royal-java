@@ -1,7 +1,7 @@
 
 var changeTotalSumPerHours = function(){
     var ratePerHour = $("#ratePerHour").val();
-    var hours = $("#totalForFirstHours").val();
+    var hours = $("#priceForEachHour").val();
     $("#totalForHours").val(ratePerHour * hours);
 }
 
@@ -15,7 +15,7 @@ var fillPaymentsFormAfterHandle = function(data){
     var shrinkSum = data.shrinkSum;*/
    $("#ratePerHour").val(data.ratePerHour);
    var ratePerHour = $("#ratePerHour").val();
-   var hours = $("#totalForFirstHours").val();
+   var hours = $("#priceForEachHour").val();
    $("#totalForHours").val(ratePerHour * hours);
 }
 

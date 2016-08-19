@@ -47,22 +47,22 @@ public class VehicleConverterImpl implements VehicleConverter {
      * @return
      */
     private String getAvailableHalfADayByDate(Vehicle vehicle, Long date) {
-        Set<String> halfsAday = new TreeSet<String>();
+        Set<String> halfsAday = new TreeSet<>();
 
         List<BookedTime> bookedTimes = bookedTimeRepository.findByVehicleIdAndDateBetween(
                 vehicle.getId(), TimeUtil.getStartOfTheDay(date),
                 TimeUtil.getEndOfTheDay(date));
 
-        if(bookedTimes.isEmpty()) {
+        if (bookedTimes.isEmpty()) {
             return "AM, PM";
-        } else if(bookedTimes.size() == 1){
+        } else if (bookedTimes.size() == 1) {
 
         } else
 
-        for (int i = 0; i < bookedTimes.size(); i++) {
-            Long finishPeriod = bookedTimes.get(i).getFinishPeriod();
-            halfsAday.add(getHalfADayByTime(finishPeriod));
-        }
+            for (int i = 0; i < bookedTimes.size(); i++) {
+                Long finishPeriod = bookedTimes.get(i).getFinishPeriod();
+                halfsAday.add(getHalfADayByTime(finishPeriod));
+            }
         String result = halfsAday.toString();
         return result.substring(1, result.length());
     }
@@ -74,7 +74,7 @@ public class VehicleConverterImpl implements VehicleConverter {
 
 
     @Override
-    public  int getAvaliableCarsNumber(List<Vehicle> vehicleList, String type) {
+    public int getAvaliableCarsNumber(List<Vehicle> vehicleList, String type) {
         int count = 0;
         for (Vehicle veh : vehicleList) {
             if (veh.getType().equals(type)) {
