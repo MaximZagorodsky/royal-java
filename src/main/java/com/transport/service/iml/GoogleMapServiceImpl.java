@@ -26,6 +26,10 @@ public class GoogleMapServiceImpl implements GoogleMapService {
 
     @Override
     public List<GoogleDistance> getDistance(List<Address> loadingAddress, List<Address> unLoadingAddress) {
+        System.out.println("GetDistance");
+        System.out.println(loadingAddress);
+        System.out.println(unLoadingAddress);
+
         GeoApiContext context = new GeoApiContext().setApiKey("AIzaSyDZ-VaWEjQbT64fZtb80JfOzJvH6KPcbH0");
         //<editor-fold desc="Description">
         //        GeocodingResult[] results = GeocodingApi.geocode(context,

@@ -23,10 +23,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.mail.MessagingException;
 import javax.transaction.Transactional;
 import java.math.BigDecimal;
-import java.math.RoundingMode;
 import java.sql.Timestamp;
 import java.util.Date;
 import java.util.HashSet;
@@ -129,12 +127,12 @@ public class OrderServiceImpl implements OrderService {
                 byCreatedTime.getId()
         );
 
-        try {
+    /*    try {
             System.out.println("ORDER DISCOUNT FROM ADD Order:" + byCreatedTime.getDiscount().setScale(2, RoundingMode.CEILING));
             mailSender.sent(byCreatedTime);
         } catch (MessagingException e) {
             e.printStackTrace();
-        }
+        }*/
         return byCreatedTime;
 
     }
