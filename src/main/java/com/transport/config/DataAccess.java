@@ -65,9 +65,11 @@ public class DataAccess {
         mailSender.setHost("smtp.gmail.com");
         mailSender.setPort(587);
         //Set gmail email id
+//        mailSender.setUsername("proximahaiz@gmail.com");
         mailSender.setUsername("textmesweet@gmail.com");
 
         //Set gmail email password
+//        mailSender.setPassword("546595qqq");
         mailSender.setPassword("Rr123456");
         Properties prop = mailSender.getJavaMailProperties();
         prop.put("mail.transport.protocol", "smtp");
