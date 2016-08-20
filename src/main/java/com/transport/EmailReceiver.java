@@ -1,3 +1,4 @@
+/*
 package com.transport;
 
 import javax.mail.*;
@@ -6,21 +7,25 @@ import javax.mail.internet.MimeMultipart;
 import java.io.IOException;
 import java.util.Properties;
 
+*/
 /**
  * This program demonstrates how to get e-mail messages from a POP3/IMAP server
  *
  * @author www.codejava.net
- */
+ *//*
+
 public class EmailReceiver {
 
-    /**
+    */
+/**
      * Returns a Properties object which is configured for a POP3/IMAP server
      *
      * @param protocol either "imap" or "pop3"
      * @param host
      * @param port
      * @return a Properties object
-     */
+     *//*
+
     private Properties getServerProperties(String protocol, String host,
                                            String port) {
         Properties properties = new Properties();
@@ -43,7 +48,8 @@ public class EmailReceiver {
         return properties;
     }
 
-    /**
+    */
+/**
      * Downloads new messages and fetches details for each message.
      *
      * @param protocol
@@ -51,7 +57,8 @@ public class EmailReceiver {
      * @param port
      * @param userName
      * @param password
-     */
+     *//*
+
     public void downloadEmails(String protocol, String host, String port,
                                String userName, String password) throws IOException {
         Properties properties = getServerProperties(protocol, host, port);
@@ -127,12 +134,14 @@ public class EmailReceiver {
         }
     }
 
-    /**
+    */
+/**
      * Returns a list of addresses in String format separated by comma
      *
      * @param address an array of Address objects
      * @return a string represents a list of addresses
-     */
+     *//*
+
     private String parseAddresses(Address[] address) {
         String listAddress = "";
 
@@ -148,9 +157,11 @@ public class EmailReceiver {
         return listAddress;
     }
 
-    /**
+    */
+/**
      * Test downloading e-mail messages
-     */
+     *//*
+
     public static void main(String[] args) throws IOException {
         // for POP3
         //String protocol = "pop3";
@@ -169,4 +180,4 @@ public class EmailReceiver {
         EmailReceiver receiver = new EmailReceiver();
         receiver.downloadEmails(protocol, host, port, userName, password);
     }
-}
+}*/
